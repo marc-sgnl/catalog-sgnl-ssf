@@ -214,8 +214,8 @@ entities:
         externalId: passwordProfile__forceChangePasswordNextSignInWithMfa
         type: Bool
   Group:
-    description: "Group Entity in Azure AD"
     displayName: AADGroup
+    description: "Group Entity in Azure AD"
     externalId: Group
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -335,8 +335,8 @@ entities:
         externalId: licenseProcessingState
         type: String
   GroupMember:
-    description: "Group Member Entity in Azure AD"
     displayName: AADGroupMember
+    description: "Group Member Entity in Azure AD"
     externalId: GroupMember
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -360,19 +360,19 @@ entities:
         indexed: true
 relationships:
   - name: Manager
-    fromAttribute: User.manager__id
-    toAttribute: User.id
+    fromAttribute: AADUser.manager__id
+    toAttribute: AADUser.id
     # [TODO sc-11020] Give these a unique ID, rename both of these to Member,
     # and keep corresponding path relationships unique below
   - name: UserMember
-    fromAttribute: GroupMember.memberId
-    toAttribute: User.id
+    fromAttribute: AADGroupMember.memberId
+    toAttribute: AADUser.id
   - name: GroupMember
-    fromAttribute: GroupMember.memberId
-    toAttribute: Group.id
+    fromAttribute: AADGroupMember.memberId
+    toAttribute: AADGroup.id
   - name: MemberOf
-    fromAttribute: GroupMember.groupId
-    toAttribute: Group.id
+    fromAttribute: AADGroupMember.groupId
+    toAttribute: AADGroup.id
   - name: Group
     path:
       - relationship: UserMember

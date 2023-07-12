@@ -201,7 +201,7 @@ entities:
         externalId: profile__description
         type: String
   GroupMember:
-    displayName: GroupMember
+    displayName: OktaGroupMember
     externalId: GroupMember
     description: Group Member entity in Okta
     syncFrequency: HOURLY
@@ -227,11 +227,11 @@ entities:
 
 relationships:
   - name: Member
-    fromAttribute: GroupMember.userId
-    toAttribute: User.id
+    fromAttribute: OktaGroupMember.userId
+    toAttribute: OktaUser.id
   - name: GroupMembership
-    fromAttribute: GroupMember.groupId
-    toAttribute: Group.id
+    fromAttribute: OktaGroupMember.groupId
+    toAttribute: OktaGroup.id
   - name: Manager
-    fromAttribute: User.profile__managerId
-    toAttribute: User.id
+    fromAttribute: OktaUser.profile__managerId
+    toAttribute: OktaUser.id
