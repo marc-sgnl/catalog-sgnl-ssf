@@ -1,6 +1,6 @@
-displayName: "{{Input Required: Display-Name}}"
+displayName: "Custom SoR"
 icon: ""
-description: "{{Input Required: Description}}"
+description: "Template to create a custom SoR"
 address: "{{Input Required: Address}}"
 defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
