@@ -226,12 +226,15 @@ entities:
         indexed: true
 
 relationships:
-  - name: Member
+  Member:
+    name: Member
     fromAttribute: GroupMember.userId
     toAttribute: User.id
-  - name: GroupMembership
+  GroupMembership:
+    name: GroupMembership
     fromAttribute: GroupMember.groupId
     toAttribute: Group.id
-  - name: Manager
+  UserManager:
+    name: Manager
     fromAttribute: User.profile__managerId
     toAttribute: User.id
