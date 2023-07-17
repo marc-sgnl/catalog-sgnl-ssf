@@ -922,27 +922,35 @@ entities:
         externalId: sys_tags
         type: String
 relationships:
-  - name: UserManager
+  UserManager:
+    name: Manager
     fromAttribute: User.manager
     toAttribute: User.sysId
-  - name: GroupManager
+  GroupManager:
+    name: Manager
     fromAttribute: Group.manager
     toAttribute: User.sysId
-  - name: CaseParent
+  CaseParent:
+    name: Parent
     fromAttribute: Case.parent
     toAttribute: Case.sysId
-  - name: AccountParent
+  AccountParent:
+    name: Parent
     fromAttribute: Account.accountParent
     toAttribute: Account.sysId
-  - name: GroupParent
+  GroupParent:
+    name: Parent
     fromAttribute: Group.parent
     toAttribute: Group.sysId
-  - name: AssignedTo
+  CaseAssignedTo:
+    name: AssignedTo
     fromAttribute: Case.assignedTo
     toAttribute: User.sysId
-  - name: Account
+  CaseAccount:
+    name: Account
     fromAttribute: Case.account
     toAttribute: Account.sysId
-  - name: DefaultAssignee
+  GroupDefaultAssignee:
+    name: DefaultAssignee
     fromAttribute: Group.defaultAssignee
     toAttribute: User.sysId

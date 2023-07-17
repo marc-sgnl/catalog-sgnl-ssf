@@ -359,27 +359,33 @@ entities:
         type: String
         indexed: true
 relationships:
-  - name: Manager
+  UserManager:
+    name: Manager
     fromAttribute: User.manager__id
     toAttribute: User.id
     # [TODO sc-11020] Give these a unique ID, rename both of these to Member,
     # and keep corresponding path relationships unique below
-  - name: UserMember
+  UserMember:
+    name: Member
     fromAttribute: GroupMember.memberId
     toAttribute: User.id
-  - name: GroupMember
+  GroupMember:
+    name: Member
     fromAttribute: GroupMember.memberId
     toAttribute: Group.id
-  - name: MemberOf
+  MemberOf:
+    name: MemberOf
     fromAttribute: GroupMember.groupId
     toAttribute: Group.id
-  - name: Group
+  UserMemberGroup:
+    name: Group
     path:
       - relationship: UserMember
         direction: Backward
       - relationship: MemberOf
         direction: Forward
-  - name: Group
+  GroupMemberGroup:
+    name: Group
     path:
       - relationship: GroupMember
         direction: Backward
