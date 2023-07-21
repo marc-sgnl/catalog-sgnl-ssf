@@ -1,0 +1,125 @@
+# Jira Configuration YAML for DS2.0
+displayName: "Jira"
+icon:
+description: "Jira as a System of Record"
+address: "{{Input Required: Jira-Domain}}.atlassian.net"
+defaultSyncFrequency: HOURLY
+defaultSyncMinInterval: 1
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+adapter:
+  hostname: "adapter.sgnl.svc.cluster.local"
+  port: 80
+  config: ""
+  apiVersion: "V1"
+  disableTls: true
+  auth:
+    - basic:
+        username: "{{Input Required: Username}}"
+        password: "{{Input Required: API Token}}"
+
+entities:
+  User:
+    # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-user-search/#api-rest-api-3-user-search-get
+    # applicationRoles and groups are not included.
+    displayName: JiraUser
+    externalId: User
+    description: User entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: accountId
+        externalId: accountId
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: self
+        externalId: self
+        type: String
+      - name: accountType
+        externalId: accountType
+        type: String
+      - name: avatarUrls__16x16
+        externalId: avatarUrls__16x16
+        type: String
+      - name: avatarUrls__24x24
+        externalId: avatarUrls__24x24
+        type: String
+      - name: avatarUrls__32x32
+        externalId: avatarUrls__32x32
+        type: String
+      - name: avatarUrls__48x48
+        externalId: avatarUrls__48x48
+        type: String
+      - name: displayName
+        externalId: displayName
+        type: String
+      - name: active
+        externalId: active
+        type: Boolean
+      - name: locale
+        externalId: locale
+        type: String
+      - name: emailAddress
+        externalId: emailAddress
+        type: String
+
+  Group:
+    # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-groups/#api-rest-api-3-group-bulk-get
+    displayName: JiraGroup
+    externalId: Group
+    description: Group entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: groupId
+        externalId: groupId
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: name
+        externalId: name
+        type: String
+
+  GroupMember:
+    displayName: GroupMember
+    externalId: GroupMember
+    description: Group Member entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: groupId
+        externalId: groupId
+        type: String
+        indexed: true
+      - name: accountId
+        externalId: accountId
+        type: String
+        indexed: true
+
+relationships:
+  Member:
+    name: Member
+    fromAttribute: GroupMember.accountId
+    toAttribute: User.accountId
+  GroupMembership:
+    name: GroupMembership
+    fromAttribute: GroupMember.groupId
+    toAttribute: Group.groupId
