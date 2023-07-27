@@ -16,7 +16,7 @@ adapter:
     - oAuth2ClientCredentials:
         clientId: "{{Input Required: Client-ID}}"
         tokenUrl: "{{Input Required: Token-URL}}"
-        authStyle: "{{Input Required: AuthStyle}}"
+        authStyle: "AutoDetect"
         clientSecret: "{{Input Required: Client-Secret}}"
     - basic:
         username: "{{Input Required: Username}}"
