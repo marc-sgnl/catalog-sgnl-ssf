@@ -1,6 +1,6 @@
 # Jira Configuration YAML for DS2.0
 displayName: "Jira"
-icon:
+icon: ""
 description: "Jira as a System of Record"
 address: "{{Input Required: Jira-Domain}}.atlassian.net"
 defaultSyncFrequency: HOURLY
@@ -8,9 +8,9 @@ defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
 adapter:
-  hostname: "adapter.sgnl.svc.cluster.local"
+  hostname: "adapter-sgnl.sgnl.svc.cluster.local"
   port: 80
-  config: ""
+  config: "{{Input Required: Config}}" # Empty config: "e30="
   apiVersion: "V1"
   disableTls: true
   auth:
@@ -60,12 +60,36 @@ entities:
         type: String
       - name: active
         externalId: active
-        type: Boolean
+        type: Bool
       - name: locale
         externalId: locale
         type: String
       - name: emailAddress
         externalId: emailAddress
+        type: String
+
+  Issue:
+    # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-search/#api-rest-api-3-search-post
+    displayName: JiraIssue
+    externalId: Issue
+    description: Issue entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: self
+        externalId: self
+        type: String
+      - name: key
+        externalId: key
         type: String
 
   Group:
@@ -90,7 +114,7 @@ entities:
         type: String
 
   GroupMember:
-    displayName: GroupMember
+    displayName: JiraGroupMember
     externalId: GroupMember
     description: Group Member entity in Jira
     syncFrequency: HOURLY
