@@ -10,7 +10,11 @@ defaultApiCallMinInterval: 1
 adapter:
   hostname: "adapter-sgnl.sgnl.svc.cluster.local"
   port: 80
-  config: "{{Input Required: Config}}" # Empty config: "e30="
+  # Example Configs:
+  # empty config: {} | b64: "e30="
+  # config with issues jql filter: {"issuesJqlFilter":"project=SGNL"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PVNHTkwifQ=="
+  # config with issues jql filter with space {"issuesJqlFilter":"project='Customer Support'"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PSdDdXN0b21lciBTdXBwb3J0JyJ9"
+  config: "{{Input Required: Base64 encoded Config}}"
   apiVersion: "V1"
   disableTls: true
   auth:
@@ -139,11 +143,22 @@ entities:
         indexed: true
 
 relationships:
-  Member:
-    name: Member
-    fromAttribute: GroupMember.accountId
-    toAttribute: User.accountId
-  GroupMembership:
-    name: GroupMembership
+  # (User) -[UserMember]-> (GroupMember)
+  UserMember:
+    name: UserMember
+    fromAttribute: User.accountId
+    toAttribute: GroupMember.accountId
+  # (GroupMember) -[GroupMember]-> (Group)
+  GroupMember:
+    name: GroupMember
     fromAttribute: GroupMember.groupId
     toAttribute: Group.groupId
+  # Path relationship based on the previous two relationships.
+  # (User) -[Group]-> (Group)
+  UserMemberGroup:
+    name: Group
+    path:
+      - relationship: UserMember
+        direction: Forward
+      - relationship: GroupMember
+        direction: Forward
