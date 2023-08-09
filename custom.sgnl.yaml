@@ -1,6 +1,6 @@
-displayName: "Custom SoR"
+displayName: "Skeleton SoR Template"
 icon: ""
-description: "Template to create a custom SoR"
+description: "Template to create a SoR without any entities, attributes or relationships. Once created, you can manually add entites and relationships to the SoR."
 address: "{{Input Required: Address}}"
 defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
