@@ -413,5 +413,5 @@ relationships:
   # (Issue) -[ReportedBy]-> (User)
   IssueReporter:
     name: ReportedBy
-    fromAttribute: Issue.fields__reporter__acountId
+    fromAttribute: Issue.fields__reporter__accountId
     toAttribute: User.accountId
