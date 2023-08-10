@@ -1,0 +1,417 @@
+# Jira Configuration YAML for DS2.0
+displayName: "Jira"
+icon: PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNTYuMjA4IDMwLjgzODVMMzQuNTAwMyA5LjEzMDgyTDMyLjQwOTQgN0wxNi4wNTU0IDIzLjM0MDdMOC41ODQyMiAzMC44Mzg1QzguMjEwMTIgMzEuMjEzMSA4IDMxLjcyMDggOCAzMi4yNTAyQzggMzIuNzc5NiA4LjIxMDEyIDMzLjI4NzMgOC41ODQyMiAzMy42NjE5TDIzLjUxMzMgNDguNTkwOUwzMi40MDk0IDU3LjQ3MzhMNDguNzUwMSA0MS4xMzMxTDQ5LjAwMzIgNDAuODhMNTYuMjA4IDMzLjYzNTJDNTYuNTc0IDMzLjI2MTggNTYuNzc5IDMyLjc1OTggNTYuNzc5IDMyLjIzNjlDNTYuNzc5IDMxLjcxNCA1Ni41NzQgMzEuMjEyIDU2LjIwOCAzMC44Mzg1Wk0zMi40MDk0IDM5LjY4MTRMMjQuOTUxNiAzMi4yMjM2TDMyLjQwOTQgMjQuNzY1N0wzOS44NjczIDMyLjIyMzZMMzIuNDA5NCAzOS42ODE0WiIgZmlsbD0iIzAwODJGRiIvPgo8cGF0aCBkPSJNMzIuNDA5NSAyNC43NjU4QzMwLjA2MzkgMjIuNDE5OSAyOC43NDE3IDE5LjI0MTIgMjguNzMxNyAxNS45MjM5QzI4LjcyMTggMTIuNjA2NSAzMC4wMjQ3IDkuNDE5OTUgMzIuMzU2MiA3LjA2TDE2LjA0MjEgMjMuMzc0MUwyNC45MjUgMzIuMjU2OUwzMi40MDk1IDI0Ljc2NThaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMTIxNV83ODApIi8+CjxwYXRoIGQ9Ik0zOS44NzQxIDMyLjIwMzZMMzIuNDA5NSAzOS42ODE1QzMzLjU4MDUgNDAuODQ4MiAzNC41MDk2IDQyLjIzNDYgMzUuMTQzNSA0My43NjEyQzM1Ljc3NzUgNDUuMjg3OSAzNi4xMDM4IDQ2LjkyNDYgMzYuMTAzOCA0OC41Nzc2QzM2LjEwMzggNTAuMjMwNiAzNS43Nzc1IDUxLjg2NzQgMzUuMTQzNSA1My4zOTRDMzQuNTA5NiA1NC45MjA2IDMzLjU4MDUgNTYuMzA3IDMyLjQwOTUgNTcuNDczOEw0OC43NzAyIDQxLjExMzFMMzkuODc0MSAzMi4yMDM2WiIgZmlsbD0idXJsKCNwYWludDFfbGluZWFyXzEyMTVfNzgwKSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzEyMTVfNzgwIiB4MT0iMzEuMDY0NCIgeTE9IjE3LjIyMTMiIHgyPSIyMC42NSIgeTI9IjI3LjYzNTciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agb2Zmc2V0PSIwLjE4IiBzdG9wLWNvbG9yPSIjMDA1MEQzIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwODJGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXJfMTIxNV83ODAiIHgxPSIzMy44MjEyIiB5MT0iNDcuMTM5MyIgeDI9IjQ0LjIxNTYiIHkyPSIzNi43NDQ5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMC4xOCIgc3RvcC1jb2xvcj0iIzAwNTBEMyIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDgyRkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K
+description: "Jira as a System of Record"
+address: "{{Input Required: Jira-Domain}}.atlassian.net"
+defaultSyncFrequency: HOURLY
+defaultSyncMinInterval: 1
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+adapter:
+  hostname: "adapter-sgnl.sgnl.svc.cluster.local"
+  port: 80
+  # Example Configs:
+  # empty config: {} | b64: "e30="
+  # config with issues jql filter: {"issuesJqlFilter":"project=SGNL"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PVNHTkwifQ=="
+  # config with issues jql filter with space {"issuesJqlFilter":"project='Customer Support'"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PSdDdXN0b21lciBTdXBwb3J0JyJ9"
+  config: "e30="
+  apiVersion: "V1"
+  disableTls: true
+  auth:
+    - basic:
+        username: "{{Input Required: Username}}"
+        password: "{{Input Required: API Token}}"
+
+entities:
+  User:
+    # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-user-search/#api-rest-api-3-user-search-get
+    # applicationRoles and groups are not included.
+    displayName: JiraUser
+    externalId: User
+    description: User entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: accountId
+        externalId: accountId
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: self
+        externalId: self
+        type: String
+      - name: accountType
+        externalId: accountType
+        type: String
+      - name: displayName
+        externalId: displayName
+        type: String
+      - name: active
+        externalId: active
+        type: Bool
+      - name: locale
+        externalId: locale
+        type: String
+      - name: emailAddress
+        externalId: emailAddress
+        type: String
+
+  Issue:
+    # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-search/#api-rest-api-3-search-post
+    displayName: JiraIssue
+    externalId: Issue
+    description: Issue entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: self
+        externalId: self
+        type: String
+      - name: key
+        externalId: key
+        type: String
+      - name: fields__statuscategorychangedate
+        externalId: fields__statuscategorychangedate
+        type: DateTime
+      - name: fields__issuetype__self
+        externalId: fields__issuetype__self
+        type: String
+      - name: fields__issuetype__id
+        externalId: fields__issuetype__id
+        type: String
+      - name: fields__issuetype__description
+        externalId: fields__issuetype__description
+        type: String
+      - name: fields__issuetype__name
+        externalId: fields__issuetype__name
+        type: String
+      - name: fields__issuetype__subtask
+        externalId: fields__issuetype__subtask
+        type: Bool
+      - name: fields__issuetype__avatarId
+        externalId: fields__issuetype__avatarId
+        type: Int64
+      - name: fields__issuetype__entityId
+        externalId: fields__issuetype__entityId
+        type: String
+      - name: fields__issuetype__hierarchyLevel
+        externalId: fields__issuetype__hierarchyLevel
+        type: Int64
+      - name: fields__timespent
+        externalId: fields__timespent
+        type: Int64
+      - name: fields__project__self
+        externalId: fields__project__self
+        type: String
+      - name: fields__project__id
+        externalId: fields__project__id
+        type: String
+      - name: fields__project__key
+        externalId: fields__project__key
+        type: String
+      - name: fields__project__name
+        externalId: fields__project__name
+        type: String
+      - name: fields__project__projectTypeKey
+        externalId: fields__project__projectTypeKey
+        type: String
+      - name: fields__project__simplified
+        externalId: fields__project__simplified
+        type: Bool
+      - name: fields__fixVersions
+        externalId: fields__fixVersions
+        type: String
+        list: true
+      - name: fields_aggregatetimespent
+        externalId: fields__aggregatetimespent
+        type: Int64
+      - name: fields__resolution__self
+        externalId: fields__resolution__self
+        type: String
+      - name: fields__resolution__id
+        externalId: fields__resolution__id
+        type: String
+      - name: fields__resolution__description
+        externalId: fields__resolution__description
+        type: String
+      - name: fields__resolution__name
+        externalId: fields__resolution__name
+        type: String
+      - name: fields__resolutiondate
+        externalId: fields__resolutiondate
+        type: DateTime
+      - name: fields__workratio
+        externalId: fields__workratio
+        type: Int64
+      - name: fields__lastViewed
+        externalId: fields__lastViewed
+        type: DateTime
+      - name: fields__watches__self
+        externalId: fields__watches__self
+        type: String
+      - name: fields__watches__watchCount
+        externalId: fields__watches__watchCount
+        type: Int64
+      - name: fields__watches__isWatching
+        externalId: fields__watches__isWatching
+        type: Bool
+      - name: fields__created
+        externalId: fields__created
+        type: DateTime
+      - name: fields__priority__self
+        externalId: fields__priority__self
+        type: String
+      - name: fields__priority__name
+        externalId: fields__priority__name
+        type: String
+      - name: fields__priority__id
+        externalId: fields__priority__id
+        type: String
+      - name: fields__labels
+        externalId: fields__labels
+        type: String
+        list: true
+      - name: fields__timeestimate
+        externalId: fields__timeestimate
+        type: Int64
+      - name: fields__aggregatetimeoriginalestimate
+        externalId: fields__aggregatetimeoriginalestimate
+        type: Int64
+      - name: fields__versions
+        externalId: fields__versions
+        type: String
+        list: true
+      - name: fields__issueLinks
+        externalId: fields__issueLinks
+        type: String
+        list: true
+      - name: fields__assignee__self
+        externalId: fields__assignee__self
+        type: String
+      - name: fields__assignee__accountId
+        externalId: fields__assignee__accountId
+        type: String
+      - name: fields__assignee__emailAddress
+        externalId: fields__assignee__emailAddress
+        type: String
+      - name: fields__assignee__displayName
+        externalId: fields__assignee__displayName
+        type: String
+      - name: fields__assignee__active
+        externalId: fields__assignee__active
+        type: Bool
+      - name: fields__assignee__timeZone
+        externalId: fields__assignee__timeZone
+        type: String
+      - name: fields__assignee__accountType
+        externalId: fields__assignee__accountType
+        type: String
+      - name: fields__updated
+        externalId: fields__updated
+        type: DateTime
+      - name: fields__status__self
+        externalId: fields__status__self
+        type: String
+      - name: fields__status__description
+        externalId: fields__status__description
+        type: String
+      - name: fields__status__name
+        externalId: fields__status__name
+        type: String
+      - name: fields__status__id
+        externalId: fields__status__id
+        type: String
+      - name: fields__status__statusCategory__self
+        externalId: fields__status__statusCategory__self
+        type: String
+      - name: fields__status__statusCategory__id
+        externalId: fields__status__statusCategory__id
+        type: Int64
+      - name: fields__status__statusCategory__key
+        externalId: fields__status__statusCategory__key
+        type: String
+      - name: fields__status__statusCategory__colorName
+        externalId: fields__status__statusCategory__colorName
+        type: String
+      - name: fields__status__statusCategory__name
+        externalId: fields__status__statusCategory__name
+        type: String
+      - name: fields__timeoriginalestimate
+        externalId: fields__timeoriginalestimate
+        type: String
+      - name: fields__description
+        externalId: fields__description
+        type: String
+      - name: fields__security
+        externalId: fields__security
+        type: String
+      - name: fields__aggregatetimeestimate
+        externalId: fields__aggregatetimeestimate
+        type: String
+      - name: fields__summary
+        externalId: fields__summary
+        type: String
+      - name: fields__creator__self
+        externalId: fields__creator__self
+        type: String
+      - name: fields__creator__accountId
+        externalId: fields__creator__accountId
+        type: String
+      - name: fields__creator__emailAddress
+        externalId: fields__creator__emailAddress
+        type: String
+      - name: fields__creator__displayName
+        externalId: fields__creator__displayName
+        type: String
+      - name: fields__creator__active
+        externalId: fields__creator__active
+        type: Bool
+      - name: fields__creator__timeZone
+        externalId: fields__creator__timeZone
+        type: String
+      - name: fields__creator__accountType
+        externalId: fields__creator__accountType
+        type: String
+      - name: fields__reporter__self
+        externalId: fields__reporter__self
+        type: String
+      - name: fields__reporter__accountId
+        externalId: fields__reporter__accountId
+        type: String
+      - name: fields__reporter__emailAddress
+        externalId: fields__reporter__emailAddress
+        type: String
+      - name: fields__reporter__displayName
+        externalId: fields__reporter__displayName
+        type: String
+      - name: fields__reporter__active
+        externalId: fields__reporter__active
+        type: Bool
+      - name: fields__reporter__timeZone
+        externalId: fields__reporter__timeZone
+        type: String
+      - name: fields__reporter__accountType
+        externalId: fields__reporter__accountType
+        type: String
+      - name: fields__aggregateprogress__progress
+        externalId: fields__aggregateprogress__progress
+        type: Int64
+      - name: fields__aggregateprogress__total
+        externalId: fields__aggregateprogress__total
+        type: Int64
+      - name: fields__environment
+        externalId: fields__environment
+        type: String
+      - name: fields__duedate
+        externalId: fields__duedate
+        type: DateTime
+      - name: fields__progress__progress
+        externalId: fields__progress__progress
+        type: Int64
+      - name: fields__progress__total
+        externalId: fields__progress__total
+        type: Int64
+      - name: fields__votes__self
+        externalId: fields__votes__self
+        type: String
+      - name: fields__votes__votes
+        externalId: fields__votes__votes
+        type: Int64
+      - name: fields__votes__hasVoted
+        externalId: fields__votes__hasVoted
+        type: Bool
+
+  Group:
+    # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-groups/#api-rest-api-3-group-bulk-get
+    displayName: JiraGroup
+    externalId: Group
+    description: Group entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: groupId
+        externalId: groupId
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: name
+        externalId: name
+        type: String
+
+  GroupMember:
+    displayName: JiraGroupMember
+    externalId: GroupMember
+    description: Group Member entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: groupId
+        externalId: groupId
+        type: String
+        indexed: true
+      - name: accountId
+        externalId: accountId
+        type: String
+        indexed: true
+
+relationships:
+  # (User) -[UserMember]-> (GroupMember)
+  UserMember:
+    name: UserMember
+    fromAttribute: User.accountId
+    toAttribute: GroupMember.accountId
+  # (GroupMember) -[GroupMember]-> (Group)
+  GroupMember:
+    name: GroupMember
+    fromAttribute: GroupMember.groupId
+    toAttribute: Group.groupId
+  # Path relationship based on the previous two relationships.
+  # (User) -[Group]-> (Group)
+  UserMemberGroup:
+    name: Group
+    path:
+      - relationship: UserMember
+        direction: Forward
+      - relationship: GroupMember
+        direction: Forward
+  # (Issue) -[AssignedTo]-> (User)
+  IssueAssignee:
+    name: AssignedTo
+    fromAttribute: Issue.fields__assignee__accountId
+    toAttribute: User.accountId
+  # (Issue) -[CreatedBy]-> (User)
+  IssueCreator:
+    name: CreatedBy
+    fromAttribute: Issue.fields__creator__accountId
+    toAttribute: User.accountId
+  # (Issue) -[ReportedBy]-> (User)
+  IssueReporter:
+    name: ReportedBy
+    fromAttribute: Issue.fields__reporter__accountId
+    toAttribute: User.accountId
