@@ -47,18 +47,6 @@ entities:
       - name: accountType
         externalId: accountType
         type: String
-      - name: avatarUrls__16x16
-        externalId: avatarUrls__16x16
-        type: String
-      - name: avatarUrls__24x24
-        externalId: avatarUrls__24x24
-        type: String
-      - name: avatarUrls__32x32
-        externalId: avatarUrls__32x32
-        type: String
-      - name: avatarUrls__48x48
-        externalId: avatarUrls__48x48
-        type: String
       - name: displayName
         externalId: displayName
         type: String
@@ -95,6 +83,256 @@ entities:
       - name: key
         externalId: key
         type: String
+      - name: fields__statuscategorychangedate
+        externalId: fields__statuscategorychangedate
+        type: DateTime
+      - name: fields__issuetype__self
+        externalId: fields__issuetype__self
+        type: String
+      - name: fields__issuetype__id
+        externalId: fields__issuetype__id
+        type: String
+      - name: fields__issuetype__description
+        externalId: fields__issuetype__description
+        type: String
+      - name: fields__issuetype__name
+        externalId: fields__issuetype__name
+        type: String
+      - name: fields__issuetype__subtask
+        externalId: fields__issuetype__subtask
+        type: Bool
+      - name: fields__issuetype__avatarId
+        externalId: fields__issuetype__avatarId
+        type: Int64
+      - name: fields__issuetype__entityId
+        externalId: fields__issuetype__entityId
+        type: String
+      - name: fields__issuetype__hierarchyLevel
+        externalId: fields__issuetype__hierarchyLevel
+        type: Int64
+      - name: fields__timespent
+        externalId: fields__timespent
+        type: Int64
+      - name: fields__project__self
+        externalId: fields__project__self
+        type: String
+      - name: fields__project__id
+        externalId: fields__project__id
+        type: String
+      - name: fields__project__key
+        externalId: fields__project__key
+        type: String
+      - name: fields__project__name
+        externalId: fields__project__name
+        type: String
+      - name: fields__project__projectTypeKey
+        externalId: fields__project__projectTypeKey
+        type: String
+      - name: fields__project__simplified
+        externalId: fields__project__simplified
+        type: Bool
+      - name: fields__fixVersions
+        externalId: fields__fixVersions
+        type: String
+        list: true
+      - name: fields_aggregatetimespent
+        externalId: fields__aggregatetimespent
+        type: Int64
+      - name: fields__resolution__self
+        externalId: fields__resolution__self
+        type: String
+      - name: fields__resolution__id
+        externalId: fields__resolution__id
+        type: String
+      - name: fields__resolution__description
+        externalId: fields__resolution__description
+        type: String
+      - name: fields__resolution__name
+        externalId: fields__resolution__name
+        type: String
+      - name: fields__resolutiondate
+        externalId: fields__resolutiondate
+        type: DateTime
+      - name: fields__workratio
+        externalId: fields__workratio
+        type: Int64
+      - name: fields__lastViewed
+        externalId: fields__lastViewed
+        type: DateTime
+      - name: fields__watches__self
+        externalId: fields__watches__self
+        type: String
+      - name: fields__watches__watchCount
+        externalId: fields__watches__watchCount
+        type: Int64
+      - name: fields__watches__isWatching
+        externalId: fields__watches__isWatching
+        type: Bool
+      - name: fields__created
+        externalId: fields__created
+        type: DateTime
+      - name: fields__priority__self
+        externalId: fields__priority__self
+        type: String
+      - name: fields__priority__name
+        externalId: fields__priority__name
+        type: String
+      - name: fields__priority__id
+        externalId: fields__priority__id
+        type: String
+      - name: fields__labels
+        externalId: fields__labels
+        type: String
+        list: true
+      - name: fields__timeestimate
+        externalId: fields__timeestimate
+        type: Int64
+      - name: fields__aggregatetimeoriginalestimate
+        externalId: fields__aggregatetimeoriginalestimate
+        type: Int64
+      - name: fields__versions
+        externalId: fields__versions
+        type: String
+        list: true
+      - name: fields__issueLinks
+        externalId: fields__issueLinks
+        type: String
+        list: true
+      - name: fields__assignee__self
+        externalId: fields__assignee__self
+        type: String
+      - name: fields__assignee__accountId
+        externalId: fields__assignee__accountId
+        type: String
+      - name: fields__assignee__emailAddress
+        externalId: fields__assignee__emailAddress
+        type: String
+      - name: fields__assignee__displayName
+        externalId: fields__assignee__displayName
+        type: String
+      - name: fields__assignee__active
+        externalId: fields__assignee__active
+        type: Bool
+      - name: fields__assignee__timeZone
+        externalId: fields__assignee__timeZone
+        type: String
+      - name: fields__assignee__accountType
+        externalId: fields__assignee__accountType
+        type: String
+      - name: fields__updated
+        externalId: fields__updated
+        type: DateTime
+      - name: fields__status__self
+        externalId: fields__status__self
+        type: String
+      - name: fields__status__description
+        externalId: fields__status__description
+        type: String
+      - name: fields__status__name
+        externalId: fields__status__name
+        type: String
+      - name: fields__status__id
+        externalId: fields__status__id
+        type: String
+      - name: fields__status__statusCategory__self
+        externalId: fields__status__statusCategory__self
+        type: String
+      - name: fields__status__statusCategory__id
+        externalId: fields__status__statusCategory__id
+        type: Int64
+      - name: fields__status__statusCategory__key
+        externalId: fields__status__statusCategory__key
+        type: String
+      - name: fields__status__statusCategory__colorName
+        externalId: fields__status__statusCategory__colorName
+        type: String
+      - name: fields__status__statusCategory__name
+        externalId: fields__status__statusCategory__name
+        type: String
+      - name: fields__timeoriginalestimate
+        externalId: fields__timeoriginalestimate
+        type: String
+      - name: fields__description
+        externalId: fields__description
+        type: String
+      - name: fields__security
+        externalId: fields__security
+        type: String
+      - name: fields__aggregatetimeestimate
+        externalId: fields__aggregatetimeestimate
+        type: String
+      - name: fields__summary
+        externalId: fields__summary
+        type: String
+      - name: fields__creator__self
+        externalId: fields__creator__self
+        type: String
+      - name: fields__creator__accountId
+        externalId: fields__creator__accountId
+        type: String
+      - name: fields__creator__emailAddress
+        externalId: fields__creator__emailAddress
+        type: String
+      - name: fields__creator__displayName
+        externalId: fields__creator__displayName
+        type: String
+      - name: fields__creator__active
+        externalId: fields__creator__active
+        type: Bool
+      - name: fields__creator__timeZone
+        externalId: fields__creator__timeZone
+        type: String
+      - name: fields__creator__accountType
+        externalId: fields__creator__accountType
+        type: String
+      - name: fields__reporter__self
+        externalId: fields__reporter__self
+        type: String
+      - name: fields__reporter__accountId
+        externalId: fields__reporter__accountId
+        type: String
+      - name: fields__reporter__emailAddress
+        externalId: fields__reporter__emailAddress
+        type: String
+      - name: fields__reporter__displayName
+        externalId: fields__reporter__displayName
+        type: String
+      - name: fields__reporter__active
+        externalId: fields__reporter__active
+        type: Bool
+      - name: fields__reporter__timeZone
+        externalId: fields__reporter__timeZone
+        type: String
+      - name: fields__reporter__accountType
+        externalId: fields__reporter__accountType
+        type: String
+      - name: fields__aggregateprogress__progress
+        externalId: fields__aggregateprogress__progress
+        type: Int64
+      - name: fields__aggregateprogress__total
+        externalId: fields__aggregateprogress__total
+        type: Int64
+      - name: fields__environment
+        externalId: fields__environment
+        type: String
+      - name: fields__duedate
+        externalId: fields__duedate
+        type: DateTime
+      - name: fields__progress__progress
+        externalId: fields__progress__progress
+        type: Int64
+      - name: fields__progress__total
+        externalId: fields__progress__total
+        type: Int64
+      - name: fields__votes__self
+        externalId: fields__votes__self
+        type: String
+      - name: fields__votes__votes
+        externalId: fields__votes__votes
+        type: Int64
+      - name: fields__votes__hasVoted
+        externalId: fields__votes__hasVoted
+        type: Bool
 
   Group:
     # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-groups/#api-rest-api-3-group-bulk-get
@@ -162,3 +400,18 @@ relationships:
         direction: Forward
       - relationship: GroupMember
         direction: Forward
+  # (Issue) -[AssignedTo]-> (User)
+  IssueAssignee:
+    name: AssignedTo
+    fromAttribute: Issue.fields__assignee__accountId
+    toAttribute: User.accountId
+  # (Issue) -[CreatedBy]-> (User)
+  IssueCreator:
+    name: CreatedBy
+    fromAttribute: Issue.fields__creator__accountId
+    toAttribute: User.accountId
+  # (Issue) -[ReportedBy]-> (User)
+  IssueReporter:
+    name: ReportedBy
+    fromAttribute: Issue.fields__reporter__acountId
+    toAttribute: User.accountId
