@@ -204,6 +204,7 @@ entities:
       - name: fields__assignee__accountId
         externalId: fields__assignee__accountId
         type: String
+        indexed: true
       - name: fields__assignee__emailAddress
         externalId: fields__assignee__emailAddress
         type: String
@@ -270,6 +271,7 @@ entities:
       - name: fields__creator__accountId
         externalId: fields__creator__accountId
         type: String
+        indexed: true
       - name: fields__creator__emailAddress
         externalId: fields__creator__emailAddress
         type: String
@@ -291,6 +293,7 @@ entities:
       - name: fields__reporter__accountId
         externalId: fields__reporter__accountId
         type: String
+        indexed: true
       - name: fields__reporter__emailAddress
         externalId: fields__reporter__emailAddress
         type: String
