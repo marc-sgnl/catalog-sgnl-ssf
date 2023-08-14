@@ -21,6 +21,8 @@ adapter:
         authStyle: AutoDetect
         clientSecret: "{{Input Required: Client-Secret}}"
         scope: "okta.users.read okta.groups.read"
+    - bearer:
+        authToken: "{{Input Required: token}}"
 
 entities:
   User:

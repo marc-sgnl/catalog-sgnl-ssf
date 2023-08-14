@@ -59,6 +59,7 @@ entities:
       - name: emailAddress
         externalId: emailAddress
         type: String
+        indexed: true
 
   Issue:
     # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-search/#api-rest-api-3-search-post
