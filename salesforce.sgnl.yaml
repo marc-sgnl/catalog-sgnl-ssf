@@ -272,6 +272,7 @@ entities:
     pagesOrderedById: true
     attributes:
       - name: Id
+        externalId: Id
         description: "Id of the resource"
         type: String
         indexed: true
@@ -430,6 +431,7 @@ entities:
     pagesOrderedById: true
     attributes:
       - name: Id
+        externalId: Id
         description: "Id of the resource"
         type: String
         indexed: true
@@ -501,6 +503,7 @@ entities:
     pagesOrderedById: true
     attributes:
       - name: Id
+        externalId: Id
         description: "Id of the resource"
         type: String
         indexed: true
