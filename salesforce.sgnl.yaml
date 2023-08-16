@@ -272,6 +272,7 @@ entities:
     pagesOrderedById: true
     attributes:
       - name: Id
+        externalId: Id
         description: "Id of the resource"
         type: String
         indexed: true
@@ -430,6 +431,7 @@ entities:
     pagesOrderedById: true
     attributes:
       - name: Id
+        externalId: Id
         description: "Id of the resource"
         type: String
         indexed: true
@@ -501,14 +503,11 @@ entities:
     pagesOrderedById: true
     attributes:
       - name: Id
+        externalId: Id
         description: "Id of the resource"
         type: String
         indexed: true
         uniqueId: true
-      - name: IsDeleted
-        externalId: IsDeleted
-        description: "IsDeleted attribute"
-        type: Bool
       - name: CreatedById
         externalId: CreatedById
         description: "CreatedById attribute"
@@ -609,7 +608,7 @@ entities:
       - name: EmailPreferencesAutoBcc
         externalId: EmailPreferencesAutoBcc
         description: "EmailPreferencesAutoBcc attribute"
-        type: String
+        type: Bool
       - name: EmployeeNumber
         externalId: EmployeeNumber
         description: "EmployeeNumber attribute"
