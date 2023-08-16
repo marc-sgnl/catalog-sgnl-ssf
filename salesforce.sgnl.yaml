@@ -328,10 +328,10 @@ entities:
         externalId: ContactFax
         description: "ContactFax attribute"
         type: String
-      #- name: ContactId
-      #  externalId: ContactId
-      #  description: "ContactId attribute"
-      #  type: String
+      - name: ContactId
+        externalId: ContactId
+        description: "ContactId attribute"
+        type: String
       - name: ContactMobile
         externalId: ContactMobile
         description: "ContactMobile attribute"
@@ -508,10 +508,6 @@ entities:
         type: String
         indexed: true
         uniqueId: true
-      - name: IsDeleted
-        externalId: IsDeleted
-        description: "IsDeleted attribute"
-        type: Bool
       - name: CreatedById
         externalId: CreatedById
         description: "CreatedById attribute"
@@ -538,11 +534,11 @@ entities:
         externalId: AboutMe
         description: "AboutMe attribute"
         type: String
-      #- name: AccountId
-      #  externalId: AccountId
-      #  description: "AccountId attribute"
-      #  type: String
-      #  indexed: true
+      - name: AccountId
+        externalId: AccountId
+        description: "AccountId attribute"
+        type: String
+        indexed: true
       - name: Alias
         externalId: Alias
         description: "Alias attribute"
@@ -612,7 +608,7 @@ entities:
       - name: EmailPreferencesAutoBcc
         externalId: EmailPreferencesAutoBcc
         description: "EmailPreferencesAutoBcc attribute"
-        type: String
+        type: Bool
       - name: EmployeeNumber
         externalId: EmployeeNumber
         description: "EmployeeNumber attribute"
@@ -645,10 +641,10 @@ entities:
         externalId: GeocodeAccuracy
         description: "GeocodeAccuracy attribute"
         type: String
-      #- name: IndividualId
-      #  externalId: IndividualId
-      #  description: "IndividualId attribute"
-      #  type: String
+      - name: IndividualId
+        externalId: IndividualId
+        description: "IndividualId attribute"
+        type: String
       - name: IsActive
         externalId: IsActive
         description: "IsActive attribute"
@@ -710,10 +706,10 @@ entities:
         externalId: Name
         description: "Name attribute"
         type: String
-      #- name: NumberOfFailedLogins
-      #  externalId: NumberOfFailedLogins
-      #  description: "NumberOfFailedLogins attribute"
-      #  type: Int64
+      - name: NumberOfFailedLogins
+        externalId: NumberOfFailedLogins
+        description: "NumberOfFailedLogins attribute"
+        type: Int64
       - name: OfflineTrialExpirationDate
         externalId: OfflineTrialExpirationDate
         description: "OfflineTrialExpirationDate attribute"
@@ -726,10 +722,10 @@ entities:
         externalId: PostalCode
         description: "PostalCode attribute"
         type: String
-      #- name: ProfileId
-      #  externalId: ProfileId
-      #  description: "ProfileId attribute"
-      #  type: String
+      - name: ProfileId
+        externalId: ProfileId
+        description: "ProfileId attribute"
+        type: String
       - name: ReceivesAdminInfoEmails
         externalId: ReceivesAdminInfoEmails
         description: "ReceivesAdminInfoEmails attribute"
@@ -827,10 +823,10 @@ entities:
         externalId: UserPreferencesActivityRemindersPopup
         description: "UserPreferencesActivityRemindersPopup attribute"
         type: Bool
-      #- name: UserPreferencesApexPagesDeveloperMode
-      #  externalId: UserPreferencesApexPagesDeveloperMode
-      #  description: "UserPreferencesApexPagesDeveloperMode attribute"
-      #  type: Bool
+      - name: UserPreferencesApexPagesDeveloperMode
+        externalId: UserPreferencesApexPagesDeveloperMode
+        description: "UserPreferencesApexPagesDeveloperMode attribute"
+        type: Bool
       - name: UserPreferencesContentEmailAsAndWhen
         externalId: UserPreferencesContentEmailAsAndWhen
         description: "UserPreferencesContentEmailAsAndWhen attribute"
@@ -923,19 +919,19 @@ entities:
         externalId: UserPreferencesHideCSNGetChatterMobileTask
         description: "UserPreferencesHideCSNGetChatterMobileTask attribute"
         type: Bool
-      #- name: UserRoleId
-      #  externalId: UserRoleId
-      #  description: "UserRoleId attribute"
-      #  type: String
+      - name: UserRoleId
+        externalId: UserRoleId
+        description: "UserRoleId attribute"
+        type: String
       - name: UserType
         externalId: UserType
         description: "UserType attribute"
         type: String
 relationships:
-  #UserAccount:
-  #  name: Account
-  #  fromAttribute: User.AccountId
-  #  toAttribute: Account.Id
+  UserAccount:
+    name: Account
+    fromAttribute: User.AccountId
+    toAttribute: Account.Id
   CaseAccount:
     name: Account
     fromAttribute: Case.AccountId
