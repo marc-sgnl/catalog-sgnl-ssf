@@ -358,6 +358,158 @@ entities:
         externalId: memberId
         type: String
         indexed: true
+  Application:
+    # https://learn.microsoft.com/en-us/graph/api/resources/application?view=graph-rest-1.0
+    description: "Application Entity in Azure AD"
+    displayName: AADApplication
+    externalId: Application
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 999
+    pagesOrderedById: false
+    attributes: 
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: appId
+        externalId: appId
+        type: String
+        indexed: true
+      - name: tags
+        externalId: tags
+        type: String
+        list: true
+      - name: applicationTemplateId
+        externalId: applicationTemplateId
+        type: String
+      - name: certification__certificationDetailsUrl
+        externalId: certification__certificationDetailsUrl
+        type: String
+      - name: certification__certificationExpirationDateTime
+        externalId: certification__certificationExpirationDateTime
+        type: DateTime
+      - name: certification__isCertifiedByMicrosoft
+        externalId: certification__isCertifiedByMicrosoft
+        type: Bool
+      - name: certification__isPublisherAttested
+        externalId: certification__isPublisherAttested
+        type: Bool
+      - name: certification__lastCertificationDateTime
+        externalId: certification__lastCertificationDateTime
+        type: DateTime
+      - name: createdDateTime
+        externalId: createdDateTime
+        type: DateTime
+      - name: deletedDateTime
+        externalId: deletedDateTime
+        type: DateTime
+      - name: description
+        externalId: description
+        type: String
+      - name: disabledByMicrosoftStatus
+        externalId: disabledByMicrosoftStatus
+        type: String
+      - name: displayName
+        externalId: displayName
+        type: String
+      - name: groupMembershipClaims
+        externalId: groupMembershipClaims
+        type: String
+      - name: identifierUris
+        externalId: identifierUris
+        type: String
+        list: true
+      - name: isDeviceOnlyAuthSupported
+        externalId: isDeviceOnlyAuthSupported
+        type: Bool
+      - name: isFallbackPublicClient
+        externalId: isFallbackPublicClient
+        type: Bool
+      - name: keyCredential__displayName
+        externalId: keyCredential__displayName
+        type: String
+      - name: keyCredential__endDateTime
+        externalId: keyCredential__endDateTime
+        type: DateTime
+      - name: keyCredential__keyId
+        externalId: keyCredential__keyId
+        type: String
+      - name: keyCredential__startDateTime
+        externalId: keyCredential__startDateTime
+        type: DateTime
+      - name: keyCredential__type
+        externalId: keyCredential__type
+        type: String
+      - name: keyCredential__usage
+        externalId: keyCredential__usage
+        type: String
+      - name: notes
+        externalId: notes
+        type: String
+      - name: oauth2RequiredPostResponse
+        externalId: oauth2RequiredPostResponse
+        type: Bool
+      - name: parentalControlSettings__countriesBlockedForMinors
+        externalId: parentalControlSettings__countriesBlockedForMinors
+        list: true
+        type: String
+      - name: parentalControlSettings__legalGroupRule
+        externalId: parentalControlSettings__legalGroupRule
+        type: String
+      - name: passwordCredential__displayName
+        externalId: passwordCredential__displayName
+        type: String
+      - name: passwordCredential__endDateTime
+        externalId: passwordCredential__endDateTime
+        type: DateTime
+      - name: passwordCredential__keyId
+        externalId: passwordCredential__keyId
+        type: String
+      - name: passwordCredential__startDateTime
+        externalId: passwordCredential__startDateTime
+        type: DateTime
+      - name: publisherDomain
+        externalId: publisherDomain
+        type: String
+      - name: requestSignatureVerification__allowedWeakAlgorithms
+        externalId: requestSignatureVerification__allowedWeakAlgorithms
+        type: String
+      - name: requestSignatureVerification__isSignedRequestRequired
+        externalId: requestSignatureVerification__isSignedRequestRequired
+        type: Bool
+      - name: samlMetadataUrl
+        externalId: samlMetadataUrl
+        type: String
+      - name: serviceManagementReference
+        externalId: serviceManagementReference
+        type: String
+      - name: signInAudience
+        externalId: signInAudience
+        type: String
+      - name: verifiedPublisher__addedDateTime
+        externalId: verifiedPublisher__addedDateTime
+        type: DateTime
+      - name: verifiedPublisher__displayName
+        externalId: verifiedPublisher__displayName
+        type: String
+      - name: verifiedPublisher__verifiedPublisherId
+        externalId: verifiedPublisher__verifiedPublisherId
+        type: String
+      - name: webApplication__homePageUrl
+        externalId: webApplication__homePageUrl
+        type: String
+      - name: webApplication__logoutUrl
+        externalId: webApplication__logoutUrl
+        type: String
+      - name: webApplication__logoutUrl
+        externalId: webApplication__logoutUrl
+        type: String
+        list: true
+
 relationships:
   UserManager:
     name: Manager
