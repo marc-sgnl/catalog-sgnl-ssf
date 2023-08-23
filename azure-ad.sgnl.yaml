@@ -8,19 +8,16 @@ defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
-adapter:
-  hostname: "adapter.sgnl.svc.cluster.local"
-  port: 80
-  config: "ewoJInZlcnNpb24iOiAxLAoJImNvbmZpZyI6IHsKICAgICAgICAgICAgICAgICJmaWx0ZXJzIjoge30sCgkJInJlcXVlc3RUaW1lb3V0IjogIjEwcyIsCgkJImF6dXJlYWQiOiB7CiAgICAgICAgICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEuMCIKICAgICAgICAgICAgICAgIH0KCX0KfQ=="
-  apiVersion: "V1"
-  disableTls: true
-  auth:
-    - oAuth2ClientCredentials:
-        clientId: "{{Input Required: Client-ID}}"
-        scope: "https://graph.microsoft.com/.default"
-        tokenUrl: "https://login.microsoftonline.com/{{Input Required: Tenant-ID}}/oauth2/v2.0/token"
-        authStyle: InParams
-        clientSecret: "{{Input Required: Client-Secret}}"
+type: "AzureAD-1.0.0"
+adapterConfig: "ewoJInZlcnNpb24iOiAxLAoJImNvbmZpZyI6IHsKICAgICAgICAgICAgICAgICJmaWx0ZXJzIjoge30sCgkJInJlcXVlc3RUaW1lb3V0IjogIjEwcyIsCgkJImF6dXJlYWQiOiB7CiAgICAgICAgICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEuMCIKICAgICAgICAgICAgICAgIH0KCX0KfQ=="
+# This must match the list of supportedAuthMechanisms specified on the Adapter.
+auth:
+  - oAuth2ClientCredentials:
+      clientId: "{{Input Required: Client-ID}}"
+      scope: "https://graph.microsoft.com/.default"
+      tokenUrl: "https://login.microsoftonline.com/{{Input Required: Tenant-ID}}/oauth2/v2.0/token"
+      authStyle: InParams
+      clientSecret: "{{Input Required: Client-Secret}}"
 entities:
   # Configuring complex attributes will cap the page size in AAD's API response to 100.
   # See: https://learn.microsoft.com/en-us/graph/known-issues?view=graph-rest-1.0#some-limitations-apply-to-query-parameters

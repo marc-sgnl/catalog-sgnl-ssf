@@ -7,21 +7,17 @@ defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
-adapter:
-  hostname: "adapter-sgnl.sgnl.svc.cluster.local"
-  port: 80
-  # Example Configs:
-  # empty config: {} | b64: "e30="
-  # config with issues jql filter: {"issuesJqlFilter":"project=SGNL"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PVNHTkwifQ=="
-  # config with issues jql filter with space {"issuesJqlFilter":"project='Customer Support'"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PSdDdXN0b21lciBTdXBwb3J0JyJ9"
-  config: "e30="
-  apiVersion: "V1"
-  disableTls: true
-  auth:
-    - basic:
-        username: "{{Input Required: Username}}"
-        password: "{{Input Required: API Token}}"
-
+type: "Jira-1.0.0"
+# Example Configs:
+# empty config: {} | b64: "e30="
+# config with issues jql filter: {"issuesJqlFilter":"project=SGNL"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PVNHTkwifQ=="
+# config with issues jql filter with space {"issuesJqlFilter":"project='Customer Support'"} | b64: "eyJpc3N1ZXNKcWxGaWx0ZXIiOiJwcm9qZWN0PSdDdXN0b21lciBTdXBwb3J0JyJ9"
+adapterConfig: "e30="
+# This must match the list of supportedAuthMechanisms specified on the Adapter.
+auth:
+  - basic:
+      username: "{{Input Required: Username}}"
+      password: "{{Input Required: API Token}}"
 entities:
   User:
     # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-user-search/#api-rest-api-3-user-search-get

@@ -8,18 +8,15 @@ defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
-adapter:
-  hostname: "adapter.sgnl.svc.cluster.local"
-  port: 80
-  config: "ewoJInZlcnNpb24iOiAxLAoJImNvbmZpZyI6IHsKCQkicmVxdWVzdFRpbWVvdXQiOiAiMTBzIiwKCQkic2FsZXNmb3JjZSI6IHsiYXBpVmVyc2lvbiI6IjU2LjAifQoJfQp9"
-  apiVersion: "V1"
-  disableTls: true
-  auth:
-    - oAuth2ClientCredentials:
-        clientId: "{{Input Required: Client-ID}}"
-        tokenUrl: "https://{{Input Required: Tenant-Name}}.my.salesforce.com/services/oauth2/token?grant_type=client_credentials"
-        authStyle: AutoDetect
-        clientSecret: "{{Input Required: Client-Secret}}"
+type: "Salesforce-1.0.0"
+adapterConfig: "ewoJInZlcnNpb24iOiAxLAoJImNvbmZpZyI6IHsKCQkicmVxdWVzdFRpbWVvdXQiOiAiMTBzIiwKCQkic2FsZXNmb3JjZSI6IHsiYXBpVmVyc2lvbiI6IjU2LjAifQoJfQp9"
+# This must match the list of supportedAuthMechanisms specified on the Adapter.
+auth:
+  - oAuth2ClientCredentials:
+      clientId: "{{Input Required: Client-ID}}"
+      tokenUrl: "https://{{Input Required: Tenant-Name}}.my.salesforce.com/services/oauth2/token?grant_type=client_credentials"
+      authStyle: AutoDetect
+      clientSecret: "{{Input Required: Client-Secret}}"
 entities:
   Account:
     displayName: SFDCAccount
