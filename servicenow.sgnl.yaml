@@ -88,9 +88,6 @@ entities:
       - name: userName
         externalId: user_name
         type: String
-      - name: name
-        externalId: name
-        type: String
       - name: introduction
         externalId: introduction
         type: String
