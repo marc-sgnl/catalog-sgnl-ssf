@@ -240,3 +240,10 @@ relationships:
     name: Manager
     fromAttribute: User.profile__managerId
     toAttribute: User.id
+  UserMemberGroup:
+    name: Group
+    path:
+      - relationship: Member
+        direction: Backward
+      - relationship: GroupMembership
+        direction: Forward
