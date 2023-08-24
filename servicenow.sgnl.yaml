@@ -8,6 +8,8 @@ defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
 type: "ServiceNow-1.0.0"
+# Example Config:
+# {"version": 1, "config": {"requestTimeout": "10s", "servicenow": {}}}
 adapterConfig: "CnsKCSJ2ZXJzaW9uIjogMSwKCSJjb25maWciOiB7CgkJInJlcXVlc3RUaW1lb3V0IjogIjEwcyIsCgkJInNlcnZpY2Vub3ciOiB7fQoJfQp9Cg=="
 # This must match the list of supportedAuthMechanisms specified on the Adapter.
 auth:

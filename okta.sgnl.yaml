@@ -9,6 +9,8 @@ defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
 type: "Okta-1.0.0"
+# Example Config:
+# {"version": 1, "config": {"requestTimeout": "10s", "okta": {"apiVersion": "v1"}}}
 adapterConfig: "ewogICAgInZlcnNpb24iOiAxLAogICAgImNvbmZpZyI6IHsKICAgICAgICAicmVxdWVzdFRpbWVvdXQiOiAiMTBzIiwKICAgICAgICAib2t0YSI6IHsKICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEiCiAgICAgICAgfQogICAgfQp9"
 # This must match the list of supportedAuthMechanisms specified on the Adapter.
 auth:

@@ -9,6 +9,8 @@ defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
 type: "AzureAD-1.0.0"
+# Example Config:
+# {"version": 1, "config": {"filters": {}, "requestTimeout": "10s", "azuread": {"apiVersion": "v1.0"}}}
 adapterConfig: "ewoJInZlcnNpb24iOiAxLAoJImNvbmZpZyI6IHsKICAgICAgICAgICAgICAgICJmaWx0ZXJzIjoge30sCgkJInJlcXVlc3RUaW1lb3V0IjogIjEwcyIsCgkJImF6dXJlYWQiOiB7CiAgICAgICAgICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEuMCIKICAgICAgICAgICAgICAgIH0KCX0KfQ=="
 # This must match the list of supportedAuthMechanisms specified on the Adapter.
 auth:
