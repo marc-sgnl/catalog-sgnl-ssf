@@ -7,16 +7,15 @@ defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
-adapter:
-  hostname: "adapter.sgnl.svc.cluster.local"
-  port: 80
-  config: "CnsKCSJ2ZXJzaW9uIjogMSwKCSJjb25maWciOiB7CgkJInJlcXVlc3RUaW1lb3V0IjogIjEwcyIsCgkJInNlcnZpY2Vub3ciOiB7fQoJfQp9Cg=="
-  apiVersion: "V1"
-  disableTls: true
-  auth:
-    - basic:
-        username: "{{Input Required: Username}}"
-        password: "{{Input Required: Password}}"
+type: "ServiceNow-1.0.0"
+# Example Config:
+# {"version": 1, "config": {"requestTimeout": "10s", "servicenow": {}}}
+adapterConfig: "CnsKCSJ2ZXJzaW9uIjogMSwKCSJjb25maWciOiB7CgkJInJlcXVlc3RUaW1lb3V0IjogIjEwcyIsCgkJInNlcnZpY2Vub3ciOiB7fQoJfQp9Cg=="
+# This must match the list of supportedAuthMechanisms specified on the Adapter.
+auth:
+  - basic:
+      username: "{{Input Required: Username}}"
+      password: "{{Input Required: Password}}"
 entities:
   User:
     displayName: SNOWUser

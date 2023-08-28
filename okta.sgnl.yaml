@@ -8,22 +8,20 @@ defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
-adapter:
-  hostname: "adapter.sgnl.svc.cluster.local"
-  port: 80
-  config: "ewogICAgInZlcnNpb24iOiAxLAogICAgImNvbmZpZyI6IHsKICAgICAgICAicmVxdWVzdFRpbWVvdXQiOiAiMTBzIiwKICAgICAgICAib2t0YSI6IHsKICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEiCiAgICAgICAgfQogICAgfQp9"
-  apiVersion: "V1"
-  disableTls: true
-  auth:
-    - oAuth2ClientCredentials:
-        clientId: "{{Input Required: Client-ID}}"
-        tokenUrl: "https://{{Input Required: Okta-Domain}}/oauth2/v1/token"
-        authStyle: AutoDetect
-        clientSecret: "{{Input Required: Client-Secret}}"
-        scope: "okta.users.read okta.groups.read"
-    - bearer:
-        authToken: "SSWS {{Input Required: token}}"
-
+type: "Okta-1.0.0"
+# Example Config:
+# {"version": 1, "config": {"requestTimeout": "10s", "okta": {"apiVersion": "v1"}}}
+adapterConfig: "ewogICAgInZlcnNpb24iOiAxLAogICAgImNvbmZpZyI6IHsKICAgICAgICAicmVxdWVzdFRpbWVvdXQiOiAiMTBzIiwKICAgICAgICAib2t0YSI6IHsKICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEiCiAgICAgICAgfQogICAgfQp9"
+# This must match the list of supportedAuthMechanisms specified on the Adapter.
+auth:
+  - oAuth2ClientCredentials:
+      clientId: "{{Input Required: Client-ID}}"
+      tokenUrl: "https://{{Input Required: Okta-Domain}}/oauth2/v1/token"
+      authStyle: AutoDetect
+      clientSecret: "{{Input Required: Client-Secret}}"
+      scope: "okta.users.read okta.groups.read"
+  - bearer:
+      authToken: "SSWS {{Input Required: token}}"
 entities:
   User:
     displayName: OktaUser
