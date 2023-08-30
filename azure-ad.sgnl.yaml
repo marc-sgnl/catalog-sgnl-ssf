@@ -327,9 +327,6 @@ entities:
         externalId: assignedLabels
         type: String
         list: true
-      - name: deletedDateTime
-        externalId: deletedDateTime
-        type: DateTime
       - name: licenseProcessingState
         externalId: licenseProcessingState
         type: String
@@ -504,10 +501,6 @@ entities:
       - name: webApplication__logoutUrl
         externalId: webApplication__logoutUrl
         type: String
-      - name: webApplication__logoutUrl
-        externalId: webApplication__logoutUrl
-        type: String
-        list: true
 
 relationships:
   UserManager:
