@@ -8,6 +8,15 @@ defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
 type: "PagerDuty-1.0.0"
+# You can specify additional query parameters for each entity. For example,
+# {
+#   "additionalQueryParameters": {
+#     "users": {
+#       "team_ids[]": ["PJ5B6SN"]
+#     }
+#   }
+# }
+# Each param value must either be []string or string.
 adapterConfig: "e30="
 # This must match the list of supportedAuthMechanisms specified on the Adapter.
 auth:
