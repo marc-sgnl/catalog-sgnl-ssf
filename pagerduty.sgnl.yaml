@@ -20,11 +20,6 @@ type: "PagerDuty-1.0.0"
 adapterConfig: "e30="
 # This must match the list of supportedAuthMechanisms specified on the Adapter.
 auth:
-  - oAuth2ClientCredentials:
-      clientId: "{{Input Required: Client-ID}}"
-      tokenUrl: "{{Input Required: Token-URL}}"
-      authStyle: "AutoDetect"
-      clientSecret: "{{Input Required: Client-Secret}}"
   - bearer:
       authToken: "Token token={{Input Required: token}}"
 
