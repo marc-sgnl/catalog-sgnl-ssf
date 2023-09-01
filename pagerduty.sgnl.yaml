@@ -1,0 +1,530 @@
+# PagerDuty Configuration YAML for DS2.0
+displayName: "PagerDuty"
+icon: PHN2ZyB3aWR0aD0iOTc1IiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDk3NSAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8xNDM0XzE2KSI+CjxwYXRoIGQ9Ik0yMy4xIDExNS43SDBWMTU3LjdIMjMuMVYxMTUuN1oiIGZpbGw9IiMyRjMzMzMiLz4KPHBhdGggZD0iTTg3IDcuN0M3NC42IDEuMSA2NiAwIDQ1LjcgMEgwVjk1LjZINDUuNUM2My42IDk1LjYgNzcuMSA5NC41IDg5IDg2LjZDMTAyIDc4IDEwOC43IDYzLjcgMTA4LjcgNDcuMkMxMDguNyAyOS4zIDEwMC40IDE1IDg3IDcuN1pNNTAuOCA3NS42SDIzLjFWMjAuNUw0OS4yIDIwLjNDNzMgMjAgODQuOSAyOC40IDg0LjkgNDcuNEM4NC45IDY3LjggNzAuMiA3NS42IDUwLjggNzUuNloiIGZpbGw9IiMyRjMzMzMiLz4KPHBhdGggZD0iTTk1MC41IDQxLjlMOTI4LjUgMTA0LjNDOTI0LjUgMTE1LjUgOTIyLjUgMTIxLjkgOTE4LjggMTMyLjdIOTE4LjRDOTE1LjUgMTIzLjQgOTEyLjggMTE1LjkgOTA5LjEgMTA0LjlMODg3LjggNDEuOEg4NjIuMkw5MDYuNSAxNTcuNkM5MDUuNSAxNjAuMSA5MDQuNSAxNjIuNyA5MDMuNCAxNjUuNEM4OTkuNyAxNzQuNCA4OTAuOSAxODAuMyA4ODEuMiAxODAuM0g4NzAuMlYyMDBIODgxLjVDODk5LjggMjAwIDkxNi4zIDE4OC44IDkyMy4xIDE3MS44QzkzNy4yIDEzNi41IDk2MS4yIDc2LjQgOTc0LjkgNDEuOUg5NTAuNVoiIGZpbGw9IiMyRjMzMzMiLz4KPHBhdGggZD0iTTMzNi4yIDEzNS40QzMzNi4yIDE3Ny4zIDMxNyAyMDAgMjc4LjIgMjAwQzI0OS4zIDIwMCAyMzEuOSAxODQuOCAyMjUuNyAxNjEuOUgyNDkuMUMyNTMuMSAxNzIuNSAyNjEuNSAxODIgMjc4LjYgMTgyQzMwNS4xIDE4MiAzMTQuNSAxNjUuNSAzMTQuNSAxMzQuMUMzMTQuMyAxMzQuMSAzMTQuMyAxMzMuOSAzMTQuMSAxMzMuOUMzMDguNCAxNDMuOCAyOTUuNiAxNTIuNiAyNzUuMyAxNTIuNkMyNDIuNyAxNTIuNiAyMjIgMTI5IDIyMiA5NS45QzIyMiA2MS41IDI0NC41IDM4LjQgMjc1LjYgMzguNEMyOTUuNyAzOC40IDMwNy44IDQ3IDMxNC40IDU2LjVDMzE0LjIgNTQuMSAzMTQuMiA1MS43IDMxNC4yIDQ5LjJWNDEuOUgzMzYuMlYxMzUuNFpNMjQ2LjIgOTUuN0MyNDYuMiAxMTguMiAyNTguOCAxMzQuMyAyODAuNCAxMzQuM0MyOTkuOCAxMzQuMyAzMTQuOCAxMjAuNiAzMTQuOCA5NS4xQzMxNC44IDcyLjQgMzAxLjYgNTcuMiAyODAuNCA1Ny4yQzI1OS4yIDU3LjIgMjQ2LjIgNzIuMyAyNDYuMiA5NS43WiIgZmlsbD0iIzJGMzMzMyIvPgo8cGF0aCBkPSJNMzcyLjcgMTA1LjZDMzczLjYgMTI1LjkgMzg2LjYgMTQyIDQwOS4xIDE0MkM0MjUgMTQyIDQzMi43IDEzNC41IDQzOC42IDEyNC42SDQ2MC45QzQ1NC4zIDE0NS41IDQzNiAxNjAuNSA0MDguMiAxNjAuNUMzNzIuNSAxNjAuNSAzNTAuMiAxMzYuNSAzNTAuMiAxMDAuM0MzNTAuMiA2NC4xIDM3My4zIDM4LjYgNDA4LjIgMzguNkM0NDUuOSAzOC42IDQ2My4zIDY3LjMgNDYzLjMgOTguNFYxMDUuN0wzNzIuNyAxMDUuNlpNNDQwLjEgODhDNDM4LjEgNjkuNyA0MjYuNiA1Ni43IDQwNy43IDU2LjdDMzg5LjYgNTYuNyAzNzUuNyA2OC42IDM3My41IDg4SDQ0MC4xWiIgZmlsbD0iIzJGMzMzMyIvPgo8cGF0aCBkPSJNNDk5IDQxLjlWNTYuN0M1MDIuNyA0NS45IDUxNCAzOSA1MjcgMzlDNTI4LjkgMzkgNTMwLjggMzkuMSA1MzIuNyAzOS40VjU5LjdDNTMwLjEgNTkuMiA1MjcuNiA1OSA1MjUgNTlDNTA0IDU5IDUwMC4xIDc0LjQgNTAwLjEgOTcuNlYxNTcuNkg0NzcuOFY2Mi42QzQ3Ny44IDU1LjMgNDc3LjggNDguOSA0NzcuNiA0MS45SDQ5OVoiIGZpbGw9IiMyRjMzMzMiLz4KPHBhdGggZD0iTTc2MS43IDE0MS4xQzc1NS43IDE1MSA3NDQuNSAxNjAuNSA3MjQuOSAxNjAuNUM2OTggMTYwLjUgNjg0LjggMTQ0IDY4NC44IDExNFY0MS45SDcwN1YxMDUuNkM3MDcgMTI4LjMgNzE0LjUgMTQyIDczMi42IDE0MkM3NTYuNCAxNDIgNzYwLjYgMTIwLjQgNzYwLjYgOTVWNDEuOUg3ODIuOVYxNDAuMkM3ODIuOSAxNDYuMiA3ODIuOSAxNTEuOSA3ODMuMSAxNTcuNkg3NjEuN1YxNDEuMVoiIGZpbGw9IiMyRjMzMzMiLz4KPHBhdGggZD0iTTgzMyA0MS45SDg1NC42VjU5LjFIODMzVjEyOC42QzgzMyAxMzkuNiA4MzguNSAxNDIuOSA4NDcuMSAxNDIuOUM4NDguOSAxNDIuOSA4NTAuOCAxNDIuNyA4NTIuNiAxNDIuNVYxNTlDODQ5LjggMTU5LjUgODQ2LjkgMTU5LjggODQ0IDE1OS45QzgyMy41IDE1OS45IDgxMC41IDE1My4xIDgxMC41IDEyOS45VjU5LjFINzkzVjQxLjlIODEwLjRWMTAuNkg4MzNWNDEuOVoiIGZpbGw9IiMyRjMzMzMiLz4KPHBhdGggZD0iTTU0Ni4zIDBINTg0LjlDNjQyLjcgMC40IDY3MC41IDI4LjYgNjcwLjcgNzkuMkM2NzAuOSAxMjIuMyA2NDguNiAxNTcuMiA1ODguNyAxNTcuN0g1NDYuM1YwWk01NjkuNyAxMzhINTgzLjJDNjI1LjEgMTM4IDY0NyAxMjIgNjQ3IDc5LjFDNjQ2LjkgNDEuNCA2MjUuMiAxOS44IDU4NS40IDE5LjhDNTc3LjcgMTkuOCA1NjkuNyAyMCA1NjkuNyAyMFYxMzhaIiBmaWxsPSIjMkYzMzMzIi8+CjxwYXRoIGQ9Ik0xODkuNyAxNTcuN0MxODkgMTUzLjEgMTg5IDE1MC4yIDE4OC42IDE0MS44QzE3OS44IDE1NC40IDE2OC4xIDE1OS45IDE0OS42IDE1OS45QzEyNS4zIDE1OS45IDEwNy43IDE0OCAxMDcuNyAxMjYuNEMxMDcuNyAxMDEuNSAxMzEuNSA5My4zIDE2Mi40IDg5LjFDMTcwLjEgODggMTc4LjcgODcuMSAxODYuMiA4Ni41QzE4Ni4yIDYzLjYgMTczLjUgNTYuNyAxNjAuMiA1Ni43QzE0Ni45IDU2LjcgMTM3LjIgNjYuMSAxMzcuMiA3OC4ySDExNS42QzExNS42IDU0LjcgMTM0LjEgMzkgMTYwLjYgMzlDMTg3LjEgMzkgMjA3LjcgNTAgMjA3LjcgOTIuNFYxMTQuOUMyMDcuNyAxMzMuNyAyMDguNiAxNDcuMyAyMTAuNiAxNTcuOUgxODkuN1YxNTcuN1pNMTMxLjcgMTI2LjFDMTMxLjcgMTM2LjkgMTQwLjUgMTQzLjcgMTU0LjYgMTQzLjdDMTc1LjMgMTQzLjcgMTg2LjQgMTMxLjEgMTg2LjQgMTA4LjZDMTg2LjMgMTA2LjUgMTg2LjQgMTA0LjUgMTg2LjYgMTAyLjRDMTQ4LjkgMTA2LjMgMTMxLjcgMTEwIDEzMS43IDEyNi4xWiIgZmlsbD0iIzJGMzMzMyIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzE0MzRfMTYiPgo8cmVjdCB3aWR0aD0iOTc0LjgiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=
+description: "PagerDuty as a System of Record"
+address: "api.pagerduty.com"
+defaultSyncFrequency: HOURLY
+defaultSyncMinInterval: 1
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+type: "PagerDuty-1.0.0"
+# You can specify additional query parameters for each entity. For example,
+# {
+#   "additionalQueryParameters": {
+#     "users": {
+#       "team_ids[]": ["PJ5B6SN"]
+#     }
+#   }
+# }
+# Each param value must either be []string or string.
+adapterConfig: "e30="
+# This must match the list of supportedAuthMechanisms specified on the Adapter.
+auth:
+  - bearer:
+      authToken: "Token token={{Input Required: token}}"
+
+entities:
+  User:
+    # https://developer.pagerduty.com/api-reference/c96e889522dd6-list-users#response-body.
+    # avatar_url attribute omitted.
+    displayName: PagerDutyUser
+    externalId: users
+    description: User entity in PagerDuty
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: summary
+        externalId: summary
+        type: String
+      - name: type
+        externalId: type
+        type: String
+      - name: self
+        externalId: self
+        type: String
+      - name: html_url
+        externalId: html_url
+        type: String
+      - name: name
+        externalId: name
+        type: String
+      - name: email
+        externalId: email
+        type: String
+      - name: time_zone
+        externalId: time_zone
+        type: String
+      - name: color
+        externalId: color
+        type: String
+      - name: role
+        externalId: role
+        type: String
+      - name: description
+        externalId: description
+        type: String
+      - name: invitation_sent
+        externalId: invitation_sent
+        type: Bool
+      - name: job_title
+        externalId: job_title
+        type: String
+      - name: license__type
+        externalId: license__type
+        type: String
+      - name: license__id
+        externalId: license__id
+        type: String
+      - name: license__summary
+        externalId: license__summary
+        type: String
+      - name: license__self
+        externalId: license__self
+        type: String
+      - name: license__html_url
+        externalId: license__html_url
+        type: String
+
+  Team:
+    # https://developer.pagerduty.com/api-reference/0138639504311-list-teams#response-body.
+    displayName: PagerDutyTeam
+    externalId: teams
+    description: Team entity in PagerDuty
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: summary
+        externalId: summary
+        type: String
+      - name: type
+        externalId: type
+        type: String
+      - name: self
+        externalId: self
+        type: String
+      - name: html_url
+        externalId: html_url
+        type: String
+      - name: name
+        externalId: name
+        type: String
+      - name: description
+        externalId: description
+        type: String
+      - name: default_role
+        externalId: default_role
+        type: String
+
+  TeamMember:
+    # https://developer.pagerduty.com/api-reference/e35802f3c4ba4-list-members-of-a-team#response-body.
+    displayName: PagerDutyTeamMember
+    externalId: members
+    description: TeamMember entity in PagerDuty
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: userId
+        externalId: userId
+        type: String
+        indexed: true
+      - name: teamId
+        externalId: teamId
+        type: String
+        indexed: true
+      - name: role
+        externalId: role
+        type: String
+
+  Incident:
+    # https://developer.pagerduty.com/api-reference/9d0b4b12e36f9-list-incidents#response-body.
+    displayName: PagerDutyIncident
+    externalId: incidents
+    description: Incident entity in PagerDuty
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: summary
+        externalId: summary
+        type: String
+      - name: type
+        externalId: type
+        type: String
+      - name: self
+        externalId: self
+        type: String
+      - name: html_url
+        externalId: html_url
+        type: String
+      - name: incident_number
+        externalId: incident_number
+        type: Int64
+      - name: title
+        externalId: title
+        type: String
+      - name: created_at
+        externalId: created_at
+        type: DateTime
+      - name: updated_at
+        externalId: updated_at
+        type: DateTime
+      - name: status
+        externalId: status
+        type: String
+      - name: incident_key
+        externalId: incident_key
+        type: String
+      - name: service__type
+        externalId: service__type
+        type: String
+      - name: service__id
+        externalId: service__id
+        type: String
+      - name: service__summary
+        externalId: service__summary
+        type: String
+      - name: service__self
+        externalId: service__self
+        type: String
+      - name: service__html_url
+        externalId: service__html_url
+        type: String
+      - name: assigned_via
+        externalId: assigned_via
+        type: String
+      - name: last_status_change_at
+        externalId: last_status_change_at
+        type: DateTime
+      - name: resolved_at
+        externalId: resolved_at
+        type: DateTime
+      - name: alert_counts__triggered
+        externalId: alert_counts__triggered
+        type: Int64
+      - name: alert_counts__resolved
+        externalId: alert_counts__resolved
+        type: Int64
+      - name: alert_counts__all
+        externalId: alert_counts__all
+        type: Int64
+      - name: is_mergeable
+        externalId: is_mergeable
+        type: Bool
+      - name: escalation_policy__type
+        externalId: escalation_policy__type
+        type: String
+      - name: escalation_policy__id
+        externalId: escalation_policy__id
+        type: String
+      - name: escalation_policy__summary
+        externalId: escalation_policy__summary
+        type: String
+      - name: escalation_policy__self
+        externalId: escalation_policy__self
+        type: String
+      - name: escalation_policy__html_url
+        externalId: escalation_policy__html_url
+        type: String
+      - name: alert_grouping__grouping_type
+        externalId: alert_grouping__grouping_type
+        type: String
+      - name: alert_grouping__started_at
+        externalId: alert_grouping__started_at
+        type: DateTime
+      - name: alert_grouping__ended_at
+        externalId: alert_grouping__ended_at
+        type: DateTime
+      - name: alert_grouping__alert_grouping_active
+        externalId: alert_grouping__alert_grouping_active
+        type: Bool
+      - name: last_status_change_by__type
+        externalId: last_status_change_by__type
+        type: String
+      - name: last_status_change_by__id
+        externalId: last_status_change_by__id
+        type: String
+      - name: last_status_change_by__summary
+        externalId: last_status_change_by__summary
+        type: String
+      - name: last_status_change_by__self
+        externalId: last_status_change_by__self
+        type: String
+      - name: last_status_change_by__html_url
+        externalId: last_status_change_by__html_url
+        type: String
+      - name: priority__id
+        externalId: priority__id
+        type: String
+      - name: priority__summary
+        externalId: priority__summary
+        type: String
+      - name: priority__type
+        externalId: priority__type
+        type: String
+      - name: priority__self
+        externalId: priority__self
+        type: String
+      - name: priority__html_url
+        externalId: priority__html_url
+        type: String
+      - name: priority__name
+        externalId: priority__name
+        type: String
+      - name: priority__description
+        externalId: priority__description
+        type: String
+      - name: resolve_reason__type
+        externalId: resolve_reason__type
+        type: String
+      - name: resolve_reason__incident__type
+        externalId: resolve_reason__incident__type
+        type: String
+      - name: resolve_reason__incident__id
+        externalId: resolve_reason__incident__id
+        type: String
+      - name: resolve_reason__incident__summary
+        externalId: resolve_reason__incident__summary
+        type: String
+      - name: resolve_reason__incident__self
+        externalId: resolve_reason__incident__self
+        type: String
+      - name: resolve_reason__incident__html_url
+        externalId: resolve_reason__incident__html_url
+        type: String
+      - name: urgency
+        externalId: urgency
+        type: String
+
+  Service:
+    # https://developer.pagerduty.com/api-reference/e960cca205c0f-list-services#response-body.
+    displayName: PagerDutyService
+    externalId: services
+    description: Service entity in PagerDuty
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: summary
+        externalId: summary
+        type: String
+      - name: type
+        externalId: type
+        type: String
+      - name: self
+        externalId: self
+        type: String
+      - name: html_url
+        externalId: html_url
+        type: String
+      - name: name
+        externalId: name
+        type: String
+      - name: description
+        externalId: description
+        type: String
+      - name: auto_resolve_timeout
+        externalId: auto_resolve_timeout
+        type: Int64
+      - name: acknowledgement_timeout
+        externalId: acknowledgement_timeout
+        type: Int64
+      - name: created_at
+        externalId: created_at
+        type: DateTime
+      - name: status
+        externalId: status
+        type: String
+      - name: last_incident_timestamp
+        externalId: last_incident_timestamp
+        type: DateTime
+      - name: escalation_policy__type
+        externalId: escalation_policy__type
+        type: String
+      - name: escalation_policy__id
+        externalId: escalation_policy__id
+        type: String
+      - name: escalation_policy__summary
+        externalId: escalation_policy__summary
+        type: String
+      - name: escalation_policy__self
+        externalId: escalation_policy__self
+        type: String
+      - name: escalation_policy__html_url
+        externalId: escalation_policy__html_url
+        type: String
+      - name: response_play__type
+        externalId: response_play__type
+        type: String
+      - name: response_play__id
+        externalId: response_play__id
+        type: String
+      - name: response_play__summary
+        externalId: response_play__summary
+        type: String
+      - name: response_play__self
+        externalId: response_play__self
+        type: String
+      - name: response_play__html_url
+        externalId: response_play__html_url
+        type: String
+      - name: incident_urgency_role__type
+        externalId: incident_urgency_role__type
+        type: String
+      - name: incident_urgency_role__urgency
+        externalId: incident_urgency_role__urgency
+        type: String
+      - name: incident_urgency_role__during_support_hours__type
+        externalId: incident_urgency_role__during_support_hours__type
+        type: String
+      - name: incident_urgency_role__during_support_hours__urgency
+        externalId: incident_urgency_role__during_support_hours__urgency
+        type: String
+      - name: incident_urgency_role__outside_support_hours__type
+        externalId: incident_urgency_role__outside_support_hours__type
+        type: String
+      - name: incident_urgency_role__outside_support_hours__urgency
+        externalId: incident_urgency_role__outside_support_hours__urgency
+        type: String
+      - name: support_hours__type
+        externalId: support_hours__type
+        type: String
+      - name: support_hours__time_zone
+        externalId: support_hours__time_zone
+        type: String
+      - name: support_hours__days_of_week
+        externalId: support_hours__days_of_week
+        type: Int64
+        list: true
+      - name: alert_creation
+        externalId: alert_creation
+        type: String
+      - name: alert_grouping_parameters__type
+        externalId: alert_grouping_parameters__type
+        type: String
+      - name: alert_grouping_parameters__config__time_window
+        externalId: alert_grouping_parameters__config__time_window
+        type: Int64
+      - name: alert_grouping_parameters__config__recommended_time_window
+        externalId: alert_grouping_parameters__config__recommended_time_window
+        type: Int64
+      - name: auto_pause_notification_parameters__enabled
+        externalId: auto_pause_notification_parameters__enabled
+        type: Bool
+      - name: auto_pause_notification_parameters__timeout
+        externalId: auto_pause_notification_parameters__timeout
+        type: Int64
+
+  Schedule:
+    # https://developer.pagerduty.com/api-reference/846ecf84402bb-list-schedules#response-body.
+    displayName: PagerDutySchedule
+    externalId: schedules
+    description: Schedule entity in PagerDuty
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: summary
+        externalId: summary
+        type: String
+      - name: type
+        externalId: type
+        type: String
+      - name: self
+        externalId: self
+        type: String
+      - name: html_url
+        externalId: html_url
+        type: String
+      - name: time_zone
+        externalId: time_zone
+        type: String
+      - name: name
+        externalId: name
+        type: String
+      - name: description
+        externalId: description
+        type: String
+      - name: final_schedule__name
+        externalId: final_schedule__name
+        type: String
+      - name: final_schedule__rendered_coverage_percentage
+        externalId: final_schedule__rendered_coverage_percentage
+        type: Double
+      - name: overrides_subschedule__name
+        externalId: overrides_subschedule__name
+        type: String
+      - name: overrides_subschedule__rendered_coverage_percentage
+        externalId: overrides_subschedule__rendered_coverage_percentage
+        type: Double
+
+relationships:
+  # (User) -[UserMember]-> (TeamMember)
+  UserMember:
+    name: UserMember
+    fromAttribute: users.id
+    toAttribute: members.userId
+  # (TeamMember) -[TeamMember]-> (Team)
+  TeamMember:
+    name: TeamMember
+    fromAttribute: members.teamId
+    toAttribute: teams.id
+  # Path relationship based on the previous two relationships.
+  # (User) -[Team]-> (Team)
+  Team:
+    name: Team
+    path:
+      - relationship: UserMember
+        direction: Forward
+      - relationship: TeamMember
+        direction: Forward
