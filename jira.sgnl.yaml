@@ -383,6 +383,109 @@ entities:
         type: String
         indexed: true
 
+  Workspace:
+    # https://developer.atlassian.com/cloud/jira/service-desk/rest/api-group-assets/#api-rest-servicedeskapi-assets-workspace-get.
+    displayName: JiraWorkspace
+    externalId: Workspace
+    description: Workspace entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: workspaceId
+        externalId: workspaceId
+        type: String
+        indexed: true
+        uniqueId: true
+
+  Asset:
+    # https://developer.atlassian.com/cloud/assets/rest/api-group-object/#api-object-aql-post.
+    displayName: JiraAsset
+    externalId: Asset
+    description: Asset entity in Jira
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: globalId
+        externalId: globalId
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: workspaceId
+        externalId: workspaceId
+        type: String
+        indexed: true
+      - name: id
+        externalId: id
+        type: String
+      - name: label
+        externalId: label
+        type: String
+      - name: objectKey
+        externalId: objectKey
+        type: String
+      - name: objectType__workspaceId
+        externalId: objectType__workspaceId
+        type: String
+      - name: objectType__globalId
+        externalId: objectType__globalId
+        type: String
+      - name: objectType__id
+        externalId: objectType__id
+        type: String
+      - name: objectType__name
+        externalId: objectType__name
+        type: String
+      - name: objectType__description
+        externalId: objectType__description
+        type: String
+      - name: objectType__position
+        externalId: objectType__position
+        type: Int64
+      - name: objectType__created
+        externalId: objectType__created
+        type: DateTime
+      - name: objectType__updated
+        externalId: objectType__updated
+        type: DateTime
+      - name: objectType__objectCount
+        externalId: objectType__objectCount
+        type: Int64
+      - name: objectType__objectSchemaId
+        externalId: objectType__objectSchemaId
+        type: String
+      - name: objectType__inherited
+        externalId: objectType__inherited
+        type: Bool
+      - name: objectType__abstractObjectType
+        externalId: objectType__abstractObjectType
+        type: Bool
+      - name: objectType__parentObjectTypeInherited
+        externalId: objectType__parentObjectTypeInherited
+        type: Bool
+      - name: created
+        externalId: created
+        type: DateTime
+      - name: updated
+        externalId: updated
+        type: DateTime
+      - name: timestamp
+        externalId: timestamp
+        type: Int64
+      - name: _links__self
+        externalId: _links__self
+        type: String
+      - name: name
+        externalId: name
+        type: String
+
 relationships:
   # (User) -[UserMember]-> (GroupMember)
   UserMember:
@@ -403,6 +506,11 @@ relationships:
         direction: Forward
       - relationship: GroupMember
         direction: Forward
+  # (Asset) -[AssetMember]-> (Workspace)
+  AssetMember:
+    name: AssetMember
+    fromAttribute: Asset.workspaceId
+    toAttribute: Workspace.workspaceId
   # (Issue) -[AssignedTo]-> (User)
   IssueAssignee:
     name: AssignedTo
