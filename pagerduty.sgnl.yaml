@@ -513,6 +513,76 @@ entities:
         externalId: overrides_subschedule__rendered_coverage_percentage
         type: Double
 
+  OnCall:
+    # https://developer.pagerduty.com/api-reference/3a6b910f11050-list-all-of-the-on-calls#response-body.
+    displayName: PagerDutyOnCall
+    externalId: oncalls
+    description: OnCall entity in PagerDuty
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: user__id
+        externalId: user__id
+        type: String
+        indexed: true
+      - name: user__type
+        externalId: user__type
+        type: String
+      - name: user__summary
+        externalId: user__summary
+        type: String
+      - name: user__self
+        externalId: user__self
+        type: String
+      - name: user__html_url
+        externalId: user__html_url
+        type: String
+      - name: schedule__id
+        externalId: schedule__id
+        type: String
+      - name: schedule__type
+        externalId: schedule__type
+        type: String
+      - name: schedule__summary
+        externalId: schedule__summary
+        type: String
+      - name: schedule__self
+        externalId: schedule__self
+        type: String
+      - name: schedule__html_url
+        externalId: schedule__html_url
+        type: String
+      - name: escalation_policy__id
+        externalId: escalation_policy__id
+        type: String
+      - name: escalation_policy__type
+        externalId: escalation_policy__type
+        type: String
+      - name: escalation_policy__summary
+        externalId: escalation_policy__summary
+        type: String
+      - name: escalation_policy__self
+        externalId: escalation_policy__self
+        type: String
+      - name: escalation_policy__html_url
+        externalId: escalation_policy__html_url
+        type: String
+      - name: start
+        externalId: start
+        type: DateTime
+      - name: end
+        externalId: end
+        type: DateTime
+
 relationships:
   # (User) -[UserMember]-> (TeamMember)
   UserMember:
@@ -533,3 +603,7 @@ relationships:
         direction: Forward
       - relationship: TeamMember
         direction: Forward
+  OnCall:
+    name: OnCall
+    fromAttribute: users.id
+    toAttribute: oncalls.user__id
