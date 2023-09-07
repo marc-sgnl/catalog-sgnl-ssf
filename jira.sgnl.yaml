@@ -401,11 +401,11 @@ entities:
         indexed: true
         uniqueId: true
 
-  Asset:
+  Object:
     # https://developer.atlassian.com/cloud/assets/rest/api-group-object/#api-object-aql-post.
-    displayName: JiraAsset
-    externalId: Asset
-    description: Asset entity in Jira
+    displayName: JiraObject
+    externalId: Object
+    description: Object entity in Jira
     syncFrequency: HOURLY
     syncMinInterval: 1
     apiCallFrequency: SECONDLY
@@ -506,10 +506,10 @@ relationships:
         direction: Forward
       - relationship: GroupMember
         direction: Forward
-  # (Asset) -[AssetMember]-> (Workspace)
-  AssetMember:
-    name: AssetMember
-    fromAttribute: Asset.workspaceId
+  # (Object) -[ObjectMember]-> (Workspace)
+  ObjectMember:
+    name: ObjectMember
+    fromAttribute: Object.workspaceId
     toAttribute: Workspace.workspaceId
   # (Issue) -[AssignedTo]-> (User)
   IssueAssignee:
