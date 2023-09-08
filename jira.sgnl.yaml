@@ -402,6 +402,8 @@ entities:
         indexed: true
         uniqueId: true
 
+  # WARNING: In order to sync Objects, you must specify the objectsQlQuery in the adapterConfig.
+  # otherwise Jira will return 400.
   Object:
     # https://developer.atlassian.com/cloud/assets/rest/api-group-object/#api-object-aql-post.
     displayName: JiraObject
