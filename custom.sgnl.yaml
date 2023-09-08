@@ -1,4 +1,4 @@
-displayName: "Skeleton SoR Template"
+displayName: "Custom SoR Template"
 icon: ""
 description: "Template to create a SoR without any entities, attributes or relationships. Once created, you can manually add entites and relationships to the SoR."
 address: "{{Input Required: Address}}"
@@ -7,7 +7,7 @@ defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
 type: "{{Input Required: SoR-Type}}"
-adapterConfig: "{{Input Required: Adapter-Config}}"
+adapterConfig: "e30="
 # This must match the list of supportedAuthMechanisms specified on the Adapter.
 auth:
   - oAuth2ClientCredentials:
