@@ -479,9 +479,10 @@ entities:
       - name: timestamp
         externalId: timestamp
         type: Int64
-      - name: _links__self
-        externalId: _links__self
-        type: String
+      # TODO: We currently don't allow attributes to be start with a non-alphanumeric char.
+      # - name: _links__self
+      #   externalId: _links__self
+      #   type: String
       - name: name
         externalId: name
         type: String
