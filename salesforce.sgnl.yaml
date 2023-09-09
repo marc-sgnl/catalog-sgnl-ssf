@@ -926,7 +926,7 @@ entities:
         externalId: UserType
         description: "UserType attribute"
         type: String
-    PublicGroup:
+  PublicGroup:
     displayName: SFDCGroup
     externalId: Group
     description: Public Group entity in Salesforce
