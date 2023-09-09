@@ -926,6 +926,42 @@ entities:
         externalId: UserType
         description: "UserType attribute"
         type: String
+    PublicGroup:
+    displayName: SFDCGroup
+    externalId: Group
+    description: Public Group entity in Salesforce
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 200 # Current minimum enforced by Salesforce API
+    pagesOrderedById: true
+    attributes:
+      - name: Id
+        externalId: Id
+        description: "Id of the resource"
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: Name
+        externalId: Name
+        description: "Name attribute"
+        type: String
+        indexed: true
+      - name: Type
+        externalId: Type
+        description: "Type attribute"
+        type: String
+        indexed: true
+      - name: DeveloperName
+        externalId: DeveloperName
+        description: "DeveloperName attribute"
+        type: String
+      - name: OwnerId
+        externalId: OwnerId
+        description: "OwnerId attribute"
+        type: String
+        indexed: true
 relationships:
   UserAccount:
     name: Account
