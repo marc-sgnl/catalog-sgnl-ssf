@@ -365,7 +365,7 @@ entities:
     apiCallMinInterval: 1
     pageSize: 999
     pagesOrderedById: false
-    attributes: 
+    attributes:
       - name: id
         externalId: id
         type: String
@@ -500,6 +500,98 @@ entities:
         type: String
       - name: webApplication__logoutUrl
         externalId: webApplication__logoutUrl
+        type: String
+  Device:
+    # https://learn.microsoft.com/en-us/graph/api/resources/device?view=graph-rest-1.0
+    description: "Device Entity in Azure AD"
+    displayName: AADDevice
+    externalId: Device
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 999
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: accountEnabled
+        externalId: accountEnabled
+        type: Bool
+      - name: approximateLastSignInDateTime
+        externalId: approximateLastSignInDateTime
+        type: DateTime
+      - name: complianceExpirationDateTime
+        externalId: complianceExpirationDateTime
+        type: DateTime
+      - name: deviceCategory
+        externalId: deviceCategory
+        type: String
+      - name: deviceId
+        externalId: deviceId
+        type: String
+        indexed: true
+      - name: deviceMetadata
+        externalId: deviceMetadata
+        type: String
+      - name: deviceOwnership
+        externalId: deviceOwnership
+        type: String
+      - name: deviceVersion
+        externalId: deviceVersion
+        type: Int64
+      - name: displayName
+        externalId: displayName
+        type: String
+      - name: enrollmentProfileName
+        externalId: enrollmentProfileName
+        type: String
+      - name: isCompliant
+        externalId: isCompliant
+        type: Bool
+      - name: isManaged
+        externalId: isManaged
+        type: Bool
+      - name: manufacturer
+        externalId: manufacturer
+        type: String
+      - name: mdmAppId
+        externalId: mdmAppId
+        type: String
+      - name: model
+        externalId: model
+        type: String
+      - name: onPremisesLastSyncDateTime
+        externalId: onPremisesLastSyncDateTime
+        type: DateTime
+      - name: onPremisesSyncEnabled
+        externalId: onPremisesSyncEnabled
+        type: Bool
+      - name: operatingSystem
+        externalId: operatingSystem
+        type: String
+      - name: operatingSystemVersion
+        externalId: operatingSystemVersion
+        type: String
+      - name: physicalIds
+        externalId: physicalIds
+        type: String
+        list: true
+      - name: profileType
+        externalId: profileType
+        type: String
+      - name: registrationDateTime
+        externalId: registrationDateTime
+        type: DateTime
+      - name: systemLabels
+        externalId: systemLabels
+        type: String
+        list: true
+      - name: trustType
+        externalId: trustType
         type: String
 
 relationships:
