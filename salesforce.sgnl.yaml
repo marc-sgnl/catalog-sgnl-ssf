@@ -10,8 +10,15 @@ defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
 type: "Salesforce-1.0.1"
 # Example Config:
-# {"requestTimeoutSeconds": 10, "apiVersion": "58.0"}
-adapterConfig: "eyJyZXF1ZXN0VGltZW91dFNlY29uZHMiOiAxMCwgImFwaVZlcnNpb24iOiAiNTguMCJ9"
+# {
+#  "requestTimeoutSeconds": 10,
+#  "apiVersion": "58.0",
+#  "filters": {
+#    "User": "isActive=true",
+#    "Case": "isClosed=false"
+#  }
+# }
+adapterConfig: "ewogICJyZXF1ZXN0VGltZW91dFNlY29uZHMiOiAxMCwKICAiYXBpVmVyc2lvbiI6ICI1OC4wIiwKICAiZmlsdGVycyI6IHsKICAgICJVc2VyIjogImlzQWN0aXZlPXRydWUiLAogICAgIkNhc2UiOiAiaXNDbG9zZWQ9ZmFsc2UiCiAgfQp9"
 # All auth mechanisms specified below must be supported by the specified Adapter.
 auth:
   - oAuth2ClientCredentials:
@@ -59,19 +66,6 @@ entities:
         externalId: SystemModstamp
         description: "SystemModstamp attribute"
         type: DateTime
-      - name: AccountNumber
-        externalId: AccountNumber
-        description: "AccountNumber attribute"
-        type: String
-        indexed: true
-      - name: AccountSource
-        externalId: AccountSource
-        description: "AccountSource attribute"
-        type: String
-      - name: AnnualRevenue
-        externalId: AnnualRevenue
-        description: "AnnualRevenue attribute"
-        type: Double
       - name: BillingCity
         externalId: BillingCity
         description: "BillingCity attribute"
@@ -80,18 +74,6 @@ entities:
         externalId: BillingCountry
         description: "BillingCountry attribute"
         type: String
-      - name: BillingGeocodeAccuracy
-        externalId: BillingGeocodeAccuracy
-        description: "BillingGeocodeAccuracy attribute"
-        type: String
-      - name: BillingLatitude
-        externalId: BillingLatitude
-        description: "BillingLatitude attribute"
-        type: Double
-      - name: BillingLongitude
-        externalId: BillingLongitude
-        description: "BillingLongitude attribute"
-        type: Double
       - name: BillingPostalCode
         externalId: BillingPostalCode
         description: "BillingPostalCode attribute"
@@ -100,59 +82,23 @@ entities:
         externalId: BillingState
         description: "BillingState attribute"
         type: String
-      - name: BillingStreet
-        externalId: BillingStreet
-        description: "BillingStreet attribute"
-        type: String
-      - name: CleanStatus
-        externalId: CleanStatus
-        description: "CleanStatus attribute"
-        type: String
       - name: Description
         externalId: Description
         description: "Description attribute"
-        type: String
-      - name: DunsNumber
-        externalId: DunsNumber
-        description: "DunsNumber attribute"
-        type: String
-      - name: Fax
-        externalId: Fax
-        description: "Fax attribute"
         type: String
       - name: Industry
         externalId: Industry
         description: "Industry attribute"
         type: String
-      - name: Jigsaw
-        externalId: Jigsaw
-        description: "Jigsaw attribute"
-        type: String
       - name: LastActivityDate
         externalId: LastActivityDate
         description: "LastActivityDate attribute"
-        type: DateTime
-      - name: LastReferencedDate
-        externalId: LastReferencedDate
-        description: "LastReferencedDate attribute"
-        type: DateTime
-      - name: LastViewedDate
-        externalId: LastViewedDate
-        description: "LastViewedDate attribute"
         type: DateTime
       - name: MasterRecordId
         externalId: MasterRecordId
         description: "MasterRecordId attribute"
         type: String
         indexed: true
-      - name: NaicsCode
-        externalId: NaicsCode
-        description: "NaicsCode attribute"
-        type: String
-      - name: NaicsDesc
-        externalId: NaicsDesc
-        description: "NaicsDesc attribute"
-        type: String
       - name: Name
         externalId: Name
         description: "Name attribute"
@@ -161,19 +107,11 @@ entities:
         externalId: NumberOfEmployees
         description: "NumberOfEmployees attribute"
         type: Int64
-      - name: OperatingHoursId
-        externalId: OperatingHoursId
-        description: "OperatingHoursId attribute"
-        type: String
       - name: OwnerId
         externalId: OwnerId
         description: "OwnerId attribute"
         type: String
         indexed: true
-      - name: Ownership
-        externalId: Ownership
-        description: "Ownership attribute"
-        type: String
       - name: ParentId
         externalId: ParentId
         description: "ParentId attribute"
@@ -183,34 +121,10 @@ entities:
         externalId: Phone
         description: "Phone attribute"
         type: String
-      - name: PhotoUrl
-        externalId: PhotoUrl
-        description: "PhotoUrl attribute"
-        type: String
-      - name: Rating
-        externalId: Rating
-        description: "Rating attribute"
-        type: String
-      - name: ShippingCity
-        externalId: ShippingCity
-        description: "ShippingCity attribute"
-        type: String
       - name: ShippingCountry
         externalId: ShippingCountry
         description: "ShippingCountry attribute"
         type: String
-      - name: ShippingGeocodeAccuracy
-        externalId: ShippingGeocodeAccuracy
-        description: "ShippingGeocodeAccuracy attribute"
-        type: String
-      - name: ShippingLatitude
-        externalId: ShippingLatitude
-        description: "ShippingLatitude attribute"
-        type: Double
-      - name: ShippingLongitude
-        externalId: ShippingLongitude
-        description: "ShippingLongitude attribute"
-        type: Double
       - name: ShippingPostalCode
         externalId: ShippingPostalCode
         description: "ShippingPostalCode attribute"
@@ -219,41 +133,9 @@ entities:
         externalId: ShippingState
         description: "ShippingState attribute"
         type: String
-      - name: ShippingStreet
-        externalId: ShippingStreet
-        description: "ShippingStreet attribute"
-        type: String
-      - name: Sic
-        externalId: Sic
-        description: "Sic attribute"
-        type: String
-      - name: SicDesc
-        externalId: SicDesc
-        description: "SicDesc attribute"
-        type: String
-      - name: Site
-        externalId: Site
-        description: "Site attribute"
-        type: String
-      - name: TickerSymbol
-        externalId: TickerSymbol
-        description: "TickerSymbol attribute"
-        type: String
-      - name: Tradestyle
-        externalId: Tradestyle
-        description: "Tradestyle attribute"
-        type: String
       - name: Type
         externalId: Type
         description: "Type attribute"
-        type: String
-      - name: Website
-        externalId: Website
-        description: "Website attribute"
-        type: String
-      - name: YearStarted
-        externalId: YearStarted
-        description: "YearStarted attribute"
         type: String
   Case:
     displayName: Case
@@ -299,10 +181,6 @@ entities:
         description: "AccountId attribute"
         type: String
         indexed: true
-      - name: Comments
-        externalId: Comments
-        description: "Comments attribute"
-        type: String
       - name: CaseNumber
         externalId: CaseNumber
         description: "CaseNumber attribute"
@@ -315,21 +193,9 @@ entities:
         externalId: ContactEmail
         description: "ContactEmail attribute"
         type: String
-      - name: ContactFax
-        externalId: ContactFax
-        description: "ContactFax attribute"
-        type: String
       - name: ContactId
         externalId: ContactId
         description: "ContactId attribute"
-        type: String
-      - name: ContactMobile
-        externalId: ContactMobile
-        description: "ContactMobile attribute"
-        type: String
-      - name: ContactPhone
-        externalId: ContactPhone
-        description: "ContactPhone attribute"
         type: String
       - name: Description
         externalId: Description
@@ -343,14 +209,6 @@ entities:
         externalId: IsEscalated
         description: "IsEscalated attribute"
         type: Bool
-      - name: LastReferencedDate
-        externalId: LastReferencedDate
-        description: "LastReferencedDate attribute"
-        type: DateTime
-      - name: LastViewedDate
-        externalId: LastViewedDate
-        description: "LastViewedDate attribute"
-        type: DateTime
       - name: MasterRecordId
         externalId: MasterRecordId
         description: "MasterRecordId attribute"
@@ -378,10 +236,6 @@ entities:
         externalId: Reason
         description: "Reason attribute"
         type: String
-      - name: SourceId
-        externalId: SourceId
-        description: "SourceId attribute"
-        type: String
       - name: Status
         externalId: Status
         description: "Status attribute"
@@ -397,14 +251,6 @@ entities:
       - name: SuppliedEmail
         externalId: SuppliedEmail
         description: "SuppliedEmail attribute"
-        type: String
-      - name: SuppliedName
-        externalId: SuppliedName
-        description: "SuppliedName attribute"
-        type: String
-      - name: SuppliedPhone
-        externalId: SuppliedPhone
-        description: "SuppliedPhone attribute"
         type: String
       - name: Type
         externalId: Type
@@ -453,14 +299,6 @@ entities:
         externalId: CustomerStatusType
         description: "CustomerStatusType attribute"
         type: String
-      - name: LastReferencedDate
-        externalId: LastReferencedDate
-        description: "LastReferencedDate attribute"
-        type: DateTime
-      - name: LastViewedDate
-        externalId: LastViewedDate
-        description: "LastViewedDate attribute"
-        type: DateTime
       - name: Name
         externalId: Name
         description: "Name attribute"
@@ -470,14 +308,6 @@ entities:
         description: "OwnerId attribute"
         type: String
         indexed: true
-      - name: PartyId
-        externalId: PartyId
-        description: "PartyId attribute"
-        type: String
-      - name: TotalLifetimeValue
-        externalId: TotalLifetimeValue
-        description: "TotalLifetimeValue attribute"
-        type: Int64
   User:
     displayName: User
     externalId: User
@@ -513,10 +343,6 @@ entities:
         externalId: SystemModstamp
         description: "SystemModstamp attribute"
         type: DateTime
-      - name: AboutMe
-        externalId: AboutMe
-        description: "AboutMe attribute"
-        type: String
       - name: AccountId
         externalId: AccountId
         description: "AccountId attribute"
@@ -525,26 +351,6 @@ entities:
       - name: Alias
         externalId: Alias
         description: "Alias attribute"
-        type: String
-      - name: BadgeText
-        externalId: BadgeText
-        description: "BadgeText attribute"
-        type: String
-      - name: BannerPhotoUrl
-        externalId: BannerPhotoUrl
-        description: "BannerPhotoUrl attribute"
-        type: String
-      - name: CallCenterId
-        externalId: CallCenterId
-        description: "CallCenterId attribute"
-        type: String
-      - name: City
-        externalId: City
-        description: "City attribute"
-        type: String
-      - name: CommunityNickname
-        externalId: CommunityNickname
-        description: "CommunityNickname attribute"
         type: String
       - name: CompanyName
         externalId: CompanyName
@@ -558,10 +364,6 @@ entities:
         externalId: Country
         description: "Country attribute"
         type: String
-      - name: DefaultGroupNotificationFrequency
-        externalId: DefaultGroupNotificationFrequency
-        description: "DefaultGroupNotificationFrequency attribute"
-        type: String
       - name: DelegatedApproverId
         externalId: DelegatedApproverId
         description: "DelegatedApproverId attribute"
@@ -570,10 +372,6 @@ entities:
       - name: Department
         externalId: Department
         description: "Department attribute"
-        type: String
-      - name: DigestFrequency
-        externalId: DigestFrequency
-        description: "DigestFrequency attribute"
         type: String
       - name: Division
         externalId: Division
@@ -584,66 +382,18 @@ entities:
         description: "Email attribute"
         type: String
         indexed: true
-      - name: EmailEncodingKey
-        externalId: EmailEncodingKey
-        description: "EmailEncodingKey attribute"
-        type: String
-      - name: EmailPreferencesAutoBcc
-        externalId: EmailPreferencesAutoBcc
-        description: "EmailPreferencesAutoBcc attribute"
-        type: Bool
       - name: EmployeeNumber
         externalId: EmployeeNumber
         description: "EmployeeNumber attribute"
-        type: String
-      - name: Extension
-        externalId: Extension
-        description: "Extension attribute"
-        type: String
-      - name: Fax
-        externalId: Fax
-        description: "Fax attribute"
-        type: String
-      - name: FederationIdentifier
-        externalId: FederationIdentifier
-        description: "FederationIdentifier attribute"
         type: String
       - name: FirstName
         externalId: FirstName
         description: "FirstName attribute"
         type: String
-      - name: ForecastEnabled
-        externalId: ForecastEnabled
-        description: "ForecastEnabled attribute"
-        type: Bool
-      - name: FullPhotoUrl
-        externalId: FullPhotoUrl
-        description: "FullPhotoUrl attribute"
-        type: String
-      - name: GeocodeAccuracy
-        externalId: GeocodeAccuracy
-        description: "GeocodeAccuracy attribute"
-        type: String
-      - name: IndividualId
-        externalId: IndividualId
-        description: "IndividualId attribute"
-        type: String
       - name: IsActive
         externalId: IsActive
         description: "IsActive attribute"
         type: Bool
-      - name: IsProfilePhotoActive
-        externalId: IsProfilePhotoActive
-        description: "IsProfilePhotoActive attribute"
-        type: Bool
-      - name: JigsawImportLimitOverride
-        externalId: JigsawImportLimitOverride
-        description: "JigsawImportLimitOverride attribute"
-        type: Int64
-      - name: LanguageLocaleKey
-        externalId: LanguageLocaleKey
-        description: "LanguageLocaleKey attribute"
-        type: String
       - name: LastLoginDate
         externalId: LastLoginDate
         description: "LastLoginDate attribute"
@@ -652,35 +402,11 @@ entities:
         externalId: LastName
         description: "LastName attribute"
         type: String
-      - name: LastReferencedDate
-        externalId: LastReferencedDate
-        description: "LastReferencedDate attribute"
-        type: DateTime
-      - name: LastViewedDate
-        externalId: LastViewedDate
-        description: "LastViewedDate attribute"
-        type: DateTime
-      - name: Latitude
-        externalId: Latitude
-        description: "Latitude attribute"
-        type: Double
-      - name: LocaleSidKey
-        externalId: LocaleSidKey
-        description: "LocaleSidKey attribute"
-        type: String
-      - name: Longitude
-        externalId: Longitude
-        description: "Longitude attribute"
-        type: Double
       - name: ManagerId
         externalId: ManagerId
         description: "ManagerId attribute"
         type: String
         indexed: true
-      - name: MediumBannerPhotoUrl
-        externalId: MediumBannerPhotoUrl
-        description: "MediumBannerPhotoUrl attribute"
-        type: String
       - name: MobilePhone
         externalId: MobilePhone
         description: "MobilePhone attribute"
@@ -693,10 +419,6 @@ entities:
         externalId: NumberOfFailedLogins
         description: "NumberOfFailedLogins attribute"
         type: Int64
-      - name: OfflineTrialExpirationDate
-        externalId: OfflineTrialExpirationDate
-        description: "OfflineTrialExpirationDate attribute"
-        type: DateTime
       - name: Phone
         externalId: Phone
         description: "Phone attribute"
@@ -709,46 +431,6 @@ entities:
         externalId: ProfileId
         description: "ProfileId attribute"
         type: String
-      - name: ReceivesAdminInfoEmails
-        externalId: ReceivesAdminInfoEmails
-        description: "ReceivesAdminInfoEmails attribute"
-        type: Bool
-      - name: ReceivesInfoEmails
-        externalId: ReceivesInfoEmails
-        description: "ReceivesInfoEmails attribute"
-        type: Bool
-      - name: SenderEmail
-        externalId: SenderEmail
-        description: "SenderEmail attribute"
-        type: String
-      - name: SenderName
-        externalId: SenderName
-        description: "SenderName attribute"
-        type: String
-      - name: Signature
-        externalId: Signature
-        description: "Signature attribute"
-        type: String
-      - name: SmallBannerPhotoUrl
-        externalId: SmallBannerPhotoUrl
-        description: "SmallBannerPhotoUrl attribute"
-        type: String
-      - name: SmallPhotoUrl
-        externalId: SmallPhotoUrl
-        description: "SmallPhotoUrl attribute"
-        type: String
-      - name: State
-        externalId: State
-        description: "State attribute"
-        type: String
-      - name: Street
-        externalId: Street
-        description: "Street attribute"
-        type: String
-      - name: TimeZoneSidKey
-        externalId: TimeZoneSidKey
-        description: "TimeZoneSidKey attribute"
-        type: String
       - name: Title
         externalId: Title
         description: "Title attribute"
@@ -758,150 +440,6 @@ entities:
         description: "Username attribute"
         type: String
         indexed: true
-      - name: UserPermissionsCallCenterAutoLogin
-        externalId: UserPermissionsCallCenterAutoLogin
-        description: "UserPermissionsCallCenterAutoLogin attribute"
-        type: Bool
-      - name: UserPermissionsInteractionUser
-        externalId: UserPermissionsInteractionUser
-        description: "UserPermissionsInteractionUser attribute"
-        type: Bool
-      - name: UserPermissionsJigsawProspectingUser
-        externalId: UserPermissionsJigsawProspectingUser
-        description: "UserPermissionsJigsawProspectingUser attribute"
-        type: Bool
-      - name: UserPermissionsKnowledgeUser
-        externalId: UserPermissionsKnowledgeUser
-        description: "UserPermissionsKnowledgeUser attribute"
-        type: Bool
-      - name: UserPermissionsMarketingUser
-        externalId: UserPermissionsMarketingUser
-        description: "UserPermissionsMarketingUser attribute"
-        type: Bool
-      - name: UserPermissionsOfflineUser
-        externalId: UserPermissionsOfflineUser
-        description: "UserPermissionsOfflineUser attribute"
-        type: Bool
-      - name: UserPermissionsSFContentUser
-        externalId: UserPermissionsSFContentUser
-        description: "UserPermissionsSFContentUser attribute"
-        type: Bool
-      - name: UserPermissionsSiteforceContributorUser
-        externalId: UserPermissionsSiteforceContributorUser
-        description: "UserPermissionsSiteforceContributorUser attribute"
-        type: Bool
-      - name: UserPermissionsSiteforcePublisherUser
-        externalId: UserPermissionsSiteforcePublisherUser
-        description: "UserPermissionsSiteforcePublisherUser attribute"
-        type: Bool
-      - name: UserPermissionsSupportUser
-        externalId: UserPermissionsSupportUser
-        description: "UserPermissionsSupportUser attribute"
-        type: Bool
-      - name: UserPermissionsWorkDotComUserFeature
-        externalId: UserPermissionsWorkDotComUserFeature
-        description: "UserPermissionsWorkDotComUserFeature attribute"
-        type: Bool
-      - name: UserPreferencesActivityRemindersPopup
-        externalId: UserPreferencesActivityRemindersPopup
-        description: "UserPreferencesActivityRemindersPopup attribute"
-        type: Bool
-      - name: UserPreferencesApexPagesDeveloperMode
-        externalId: UserPreferencesApexPagesDeveloperMode
-        description: "UserPreferencesApexPagesDeveloperMode attribute"
-        type: Bool
-      - name: UserPreferencesContentEmailAsAndWhen
-        externalId: UserPreferencesContentEmailAsAndWhen
-        description: "UserPreferencesContentEmailAsAndWhen attribute"
-        type: Bool
-      - name: UserPreferencesContentNoEmail
-        externalId: UserPreferencesContentNoEmail
-        description: "UserPreferencesContentNoEmail attribute"
-        type: Bool
-      - name: UserPreferencesEnableAutoSubForFeeds
-        externalId: UserPreferencesEnableAutoSubForFeeds
-        description: "UserPreferencesEnableAutoSubForFeeds attribute"
-        type: Bool
-      - name: UserPreferencesDisableAllFeedsEmail
-        externalId: UserPreferencesDisableAllFeedsEmail
-        description: "UserPreferencesDisableAllFeedsEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableBookmarkEmail
-        externalId: UserPreferencesDisableBookmarkEmail
-        description: "UserPreferencesDisableBookmarkEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableChangeCommentEmail
-        externalId: UserPreferencesDisableChangeCommentEmail
-        description: "UserPreferencesDisableChangeCommentEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableEndorsementEmail
-        externalId: UserPreferencesDisableEndorsementEmail
-        description: "UserPreferencesDisableEndorsementEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableFileShareNotificationsForApi
-        externalId: UserPreferencesDisableFileShareNotificationsForApi
-        description: "UserPreferencesDisableFileShareNotificationsForApi attribute"
-        type: Bool
-      - name: UserPreferencesDisableFollowersEmail
-        externalId: UserPreferencesDisableFollowersEmail
-        description: "UserPreferencesDisableFollowersEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableLaterCommentEmail
-        externalId: UserPreferencesDisableLaterCommentEmail
-        description: "UserPreferencesDisableLaterCommentEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableLikeEmail
-        externalId: UserPreferencesDisableLikeEmail
-        description: "UserPreferencesDisableLikeEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableMentionsPostEmail
-        externalId: UserPreferencesDisableMentionsPostEmail
-        description: "UserPreferencesDisableMentionsPostEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableProfilePostEmail
-        externalId: UserPreferencesDisableProfilePostEmail
-        description: "UserPreferencesDisableProfilePostEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableSharePostEmail
-        externalId: UserPreferencesDisableSharePostEmail
-        description: "UserPreferencesDisableSharePostEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisCommentAfterLikeEmail
-        externalId: UserPreferencesDisCommentAfterLikeEmail
-        description: "UserPreferencesDisCommentAfterLikeEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisMentionsCommentEmail
-        externalId: UserPreferencesDisMentionsCommentEmail
-        description: "UserPreferencesDisMentionsCommentEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisableMessageEmail
-        externalId: UserPreferencesDisableMessageEmail
-        description: "UserPreferencesDisableMessageEmail attribute"
-        type: Bool
-      - name: UserPreferencesDisProfPostCommentEmail
-        externalId: UserPreferencesDisProfPostCommentEmail
-        description: "UserPreferencesDisProfPostCommentEmail attribute"
-        type: Bool
-      - name: UserPreferencesEventRemindersCheckboxDefault
-        externalId: UserPreferencesEventRemindersCheckboxDefault
-        description: "UserPreferencesEventRemindersCheckboxDefault attribute"
-        type: Bool
-      - name: UserPreferencesHideBiggerPhotoCallout
-        externalId: UserPreferencesHideBiggerPhotoCallout
-        description: "UserPreferencesHideBiggerPhotoCallout attribute"
-        type: Bool
-      - name: UserPreferencesHideChatterOnboardingSplash
-        externalId: UserPreferencesHideChatterOnboardingSplash
-        description: "UserPreferencesHideChatterOnboardingSplash attribute"
-        type: Bool
-      - name: UserPreferencesHideCSNDesktopTask
-        externalId: UserPreferencesHideCSNDesktopTask
-        description: "UserPreferencesHideCSNDesktopTask attribute"
-        type: Bool
-      - name: UserPreferencesHideCSNGetChatterMobileTask
-        externalId: UserPreferencesHideCSNGetChatterMobileTask
-        description: "UserPreferencesHideCSNGetChatterMobileTask attribute"
-        type: Bool
       - name: UserRoleId
         externalId: UserRoleId
         description: "UserRoleId attribute"
