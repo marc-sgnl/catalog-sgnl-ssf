@@ -1,0 +1,415 @@
+displayName: "Sailpoint CAEP Events"
+description: "SSF CAEP Event Stream"
+type: "EventStreams-1.0.0"
+icon: "PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQwLjQxMTggNDIuMTM3M0gxMEwzNS4yMzUzIDEwTDQwLjQxMTggNDIuMTM3M1oiIGZpbGw9IiMwMDMzQTEiLz4KPHBhdGggZD0iTTQwLjQxMTggNDIuMTM3M0g1NEwzNS4yMzUzIDEwTDQwLjQxMTggNDIuMTM3M1oiIGZpbGw9IiNDQzI3QjAiLz4KPHBhdGggZD0iTTQwLjQxMTggNDIuMTM3M0gxMEw0Mi4zNTI5IDUzLjc4NDNMNDAuNDExOCA0Mi4xMzczWiIgZmlsbD0iIzAwNzFDRSIvPgo8cGF0aCBkPSJNNDAuNDExOCA0Mi4xMzczSDU0TDQyLjM1MjkgNTMuNzg0M0w0MC40MTE4IDQyLjEzNzNaIiBmaWxsPSIjRTE3RkQyIi8+Cjwvc3ZnPgo="
+deliveryMethod: "eventPush"
+entities:
+  SessionRevoked:
+    # https://openid.net/specs/openid-caep-1_0-03.html#name-session-revoked.
+    displayName: Session Revoked
+    externalId: https://schemas.openid.net/secevent/caep/event-type/session-revoked
+    description: Session Revoked Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+      - name: audience
+        externalId: $.aud
+        type: String
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+      # Optional fields for all CAEP events.
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].event_timestamp
+        type: Int64
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].initiating_entity
+        type: String
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].reason_admin.en
+        type: String
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].reason_user.en
+        type: String
+      # A Session Revoked event does not have any event specific claims.
+  TokenClaimsChange:
+    # https://openid.net/specs/openid-caep-1_0-03.html#name-token-claims-change.
+    displayName: Token Claims Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/token-claims-change
+    description: Token Claims Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+      - name: audience
+        externalId: $.aud
+        type: String
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+      # Optional fields for all CAEP events.
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].event_timestamp
+        type: Int64
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].initiating_entity
+        type: String
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].reason_admin.en
+        type: String
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].reason_user.en
+        type: String
+      # Event specific claims.
+      # claims is a JSON object so the user must specify the path to the specific field they want to ingest.
+      # - name: claims
+      #   externalId: $...["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].claims
+      #   type: String
+  CredentialChange:
+    # https://openid.net/specs/openid-caep-1_0-03.html#name-credential-change.
+    displayName: Credential Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/credential-change
+    description: Credential Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+      - name: audience
+        externalId: $.aud
+        type: String
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+      # Optional fields for all CAEP events.
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].event_timestamp
+        type: Int64
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].initiating_entity
+        type: String
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].reason_admin.en
+        type: String
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].reason_user.en
+        type: String
+      # Event specific claims.
+      - name: credentialType
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].credential_type
+        type: String
+      - name: changeType
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].change_type
+        type: String
+      - name: friendlyName
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].friendly_name
+        type: String
+      - name: x509Issuer
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].x509_issuer
+        type: String
+      - name: x509Serial
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].x509_serial
+        type: String
+      - name: fido2_aaguid
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].fido2_aaguid
+        type: String
+  AssuranceLevelChange:
+    # https://openid.net/specs/openid-caep-1_0-03.html#name-assurance-level-change.
+    displayName: Assurance Level Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/assurance-level-change
+    description: Assurance Level Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+      - name: audience
+        externalId: $.aud
+        type: String
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+      # Optional fields for all CAEP events.
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].event_timestamp
+        type: Int64
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].initiating_entity
+        type: String
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].reason_admin.en
+        type: String
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].reason_user.en
+        type: String
+      # Event specific claims.
+      - name: namespace
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].namespace
+        type: String
+      - name: currentLevel
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].current_level
+        type: String
+      - name: previousLevel
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].previous_level
+        type: String
+      - name: changeDirection
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].change_direction
+        type: String
+  DeviceComplianceChange:
+    # https://openid.net/specs/openid-caep-1_0-03.html#name-device-compliance-change.
+    displayName: Device Compliance Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/device-compliance-change
+    description: Device Compliance Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+      - name: audience
+        externalId: $.aud
+        type: String
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+      # Optional fields for all CAEP events.
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].event_timestamp
+        type: Int64
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].initiating_entity
+        type: String
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].reason_admin.en
+        type: String
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].reason_user.en
+        type: String
+      # Event specific claims.
+      - name: previousStatus
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].previous_status
+        type: String
+      - name: currentStatus
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].current_status
+        type: String
+  SessionEstablished:
+    # https://openid.net/specs/openid-caep-1_0-03.html#name-session-established.
+    displayName: Session Established
+    externalId: https://schemas.openid.net/secevent/caep/event-type/session-established
+    description: Session Established Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+      - name: audience
+        externalId: $.aud
+        type: String
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+      # Optional fields for all CAEP events.
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].event_timestamp
+        type: Int64
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].initiating_entity
+        type: String
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].reason_admin.en
+        type: String
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].reason_user.en
+        type: String
+      # Event specific claims.
+      - name: ipAddresses
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].ips
+        type: String
+        list: true
+      - name: fingerprintUserAgent
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].fp_ua
+        type: String
+      - name: authenticationContextClassReference
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].acr
+        type: String
+      - name: authenticationMethodsReference
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].amr
+        type: String
+      - name: externalSessionIdentifier
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].ext_id
+        type: String
+  SessionPresented:
+    # https://openid.net/specs/openid-caep-1_0-03.html#name-session-presented.
+    displayName: Session Presented
+    externalId: https://schemas.openid.net/secevent/caep/event-type/session-presented
+    description: Session Presented Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+      - name: audience
+        externalId: $.aud
+        type: String
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+      # Optional fields for all CAEP events.
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].event_timestamp
+        type: Int64
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].initiating_entity
+        type: String
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].reason_admin.en
+        type: String
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].reason_user.en
+        type: String
+      # Event specific claims.
+      - name: ipAddresses
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].ips
+        type: String
+        list: true
+      - name: fingerprintUserAgent
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].fp_ua
+        type: String
+      - name: externalSessionIdentifier
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].ext_id
+        type: String
