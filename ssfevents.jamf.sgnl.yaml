@@ -1,0 +1,101 @@
+displayName: JAMF Shared Signals
+icon: PHN2ZyBjbGFzcz0iamFtZi1sb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjIgNTYiIHJvbGU9InByZXNlbnRhdGlvbiIgYXJpYS1oaWRkZW49InRydWUiPiA8dGl0bGU+SmFtZjwvdGl0bGU+IDxwYXRoIGZpbGw9IiM3NzhlYjEiIGQ9Ik0zMy42LDcgQzI4LjEsNyAyNC44LDkuMyAyMy4zLDE0LjMgTDE5LjUsMjYuMiBDMTguMSwzMC4xIDE1LjgsMzEuNyAxMS43LDMxLjcgTDIuMiwzMS43IEMxLDMxLjcgMCwzMi43IDAsMzMuOSBMMCw0MCBDMCw0MS4xIDAuOSw0MiAyLjEsNDIgTDQwLjcsNDIgQzQxLjksNDIgNDIuOSw0MSA0Mi45LDM5LjggTDQyLjksOS4xIEM0Mi45LDcuOSA0Miw3IDQwLjgsNyBMMzMuNiw3IEwzMy42LDcgWiBNMi4zLDAgQzEuMSwwIDAsMS4xIDAsMi4zIEwwLDE4LjUgQzAsMTkuOCAxLDIwLjggMi4zLDIwLjggTDEwLjUsMjAuOCBDMTQuMiwyMC44IDE5LjQsMjAgMjAuOCwxMy40IEMyMC44LDEzLjQgMjIuMiw2LjcgMjMsMi44IEMyMy4zLDEuMyAyMi4yLC03LjEwNTQyNzM2ZS0xNSAyMC43LC03LjEwNTQyNzM2ZS0xNSBMMi4zLC03LjEwNTQyNzM2ZS0xNSBMMi4zLDAgWiI+PC9wYXRoPiA8cGF0aCBjbGFzcz0ibG9nby13b3JkbWFyayIgZD0iTTE1Mi45LDEzLjMgQzE1Mi45LDcuOCAxNTYuNiw1LjIgMTYxLjgsNSBMMTYxLjgsOS41IEwxNjAuOSw5LjUgQzE1OC42LDkuNSAxNTcuNCwxMS40IDE1Ny40LDEzLjcgTDE1Ny40LDE3LjMgTDE2MS42LDE3LjMgTDE2MS42LDIxLjMgTDE1Ny40LDIxLjMgTDE1Ny40LDQzLjUgTDE1Mi45LDQzLjUgTDE1Mi45LDIxLjIgTDE0OSwyMS4yIEwxNDksMTcuMiBMMTUyLjksMTcuMiBMMTUyLjksMTMuMyBMMTUyLjksMTMuMyBaIE0xMzcuMywyNy43IEMxMzcuMywyMy4yIDEzNC43LDIxLjIgMTMxLjYsMjEuMiBDMTI3LjksMjEuMiAxMjUuMSwyMy42IDEyNS4xLDI3LjkgTDEyNS4xLDQzLjcgTDEyMC42LDQzLjcgTDEyMC42LDI3LjcgQzEyMC42LDIzLjIgMTE4LDIxLjIgMTE0LjksMjEuMiBDMTExLjIsMjEuMiAxMDguNCwyMy42IDEwOC40LDI3LjkgTDEwOC40LDQzLjcgTDEwNCw0My43IEwxMDQsMTcuNiBMMTA4LjUsMTcuNiBMMTA4LjUsMjAuNyBMMTA4LjYsMjAuNyBDMTA5LjgsMTggMTEzLDE3IDExNS43LDE3IEMxMTguMywxNyAxMjEuMiwxNy43IDEyMy4zLDIxLjUgQzEyNC45LDE4LjIgMTI4LjMsMTcgMTMxLjcsMTcgQzEzNy4zLDE3IDE0MS42LDIwLjQgMTQxLjYsMjcuMiBMMTQxLjYsNDMuNyBMMTM3LjEsNDMuNyBMMTM3LjEsMjcuNyBMMTM3LjMsMjcuNyBaIE04My4xLDI5LjkgQzc3LjYsMjkuOSA3NS44LDMyLjYgNzUuOCwzNS4xIEM3NS44LDM3LjYgNzcuNiw0MC4zIDgzLjEsNDAuMyBDODguNiw0MC4zIDkwLjQsMzcuNiA5MC40LDM1LjEgQzkwLjQsMzIuNiA4OC41LDI5LjkgODMuMSwyOS45IEw4My4xLDI5LjkgTDgzLjEsMjkuOSBaIE05MC4yLDI2LjIgQzkwLjIsMjEuOSA4NS45LDIwLjkgODIuNSwyMC45IEM4MC4xLDIwLjkgNzcuOCwyMS41IDc1LjQsMjIuNyBMNzMuNCwxOSBDNzcuMywxNy4zIDgwLjQsMTcgODIuNywxNyBDODguOSwxNyA5NC43LDE5LjcgOTQuNywyNS45IEw5NC43LDQzLjcgTDkwLjUsNDMuNyBMOTAuNSw0MC45IEM4OC4yLDQzLjMgODUuNyw0NC4zIDgyLjMsNDQuMyBDNzYsNDQuMyA3MSw0MC44IDcxLDM0LjkgQzcxLDMwLjEgNzUsMjUuOSA4Mi4yLDI1LjkgQzg0LjksMjUuOSA4Ny44LDI2LjcgOTAuMiwyOC45IEw5MC4yLDI2LjIgTDkwLjIsMjYuMiBaIE02Mi41LDYgQzY0LjIsNiA2NS42LDcuNCA2NS42LDkuMSBDNjUuNiwxMC45IDY0LjIsMTIuMyA2Mi41LDEyLjMgQzYwLjgsMTIuMyA1OS40LDEwLjkgNTkuNCw5LjIgQzU5LjQsNy40IDYwLjgsNiA2Mi41LDYgTDYyLjUsNiBMNjIuNSw2IFogTTYwLjQsMTcuNCBMNjQuOSwxNy40IEw2NSw0Ni45IEM2NSw1My43IDYwLjYsNTYgNTUuNyw1NiBMNTQsNTYgTDU0LDUxLjggTDU1LjcsNTEuOCBDNjAuMSw1MS44IDYwLjUsNDkuNCA2MC41LDQ3LjEgTDYwLjQsMTcuNCBMNjAuNCwxNy40IFoiPjwvcGF0aD4gPC9zdmc+
+type: "EventStreams-1.0.0"
+description: SSF CAEP Event Stream
+deliveryMethod: "eventPush"
+entities:
+  29253593c40347ed9643ec4f89dc9a59:
+    displayName: Device Risk Change
+    externalId: https://schemas.okta.com/secevent/okta/event-type/device-risk-change
+    description: https://schemas.okta.com/secevent/okta/event-type/device-risk-change
+    pagesOrderedById: false
+    attributes:
+      - name: exp
+        externalId: $.exp
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: 16f20a6f-47e5-471e-9ddd-87a021602987
+        list: false
+      - name: subject
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].subject.user.email
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 3bd13757-3e0e-40bb-b374-d7b719ebc396
+        list: false
+      - name: previous_level
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].previous_level
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 5481bb07-597a-4b8b-80ba-bed7d417b0e1
+        list: false
+      - name: previous_management_status
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].previous_management_status
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 633fb86f-2b86-4ef2-87cf-2a009a069d76
+        list: false
+      - name: id
+        externalId: $.jti
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 7d071538-6942-457a-967d-42fa3b2b051f
+        list: false
+      - name: iat
+        externalId: $.iat
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: a74d9af9-9c90-4b86-9efc-26175ff88c65
+        list: false
+      - name: current_management_status
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].current_management_status
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: c6c32fbf-500f-4c38-a725-669c6fc54332
+        list: false
+      - name: iss
+        externalId: $.iss
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: d2a215e9-c9ac-42bd-84df-fbe4e3443ae6
+        list: false
+      - name: sgnlJwt
+        externalId: $.sgnl_jwt
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: d8c3520e-cc1c-4f54-ae8b-cbf7353bda19
+        list: false
+      - name: current_level
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].current_level
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: db52bc28-fdc1-4e5a-85e0-2f11baff14e3
+        list: false
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: dc80ab58-5ff1-4453-b36d-3c9aa80dd9b4
+        list: false
+    entityAlias: 29253593-c403-47ed-9643-ec4f89dc9a59
