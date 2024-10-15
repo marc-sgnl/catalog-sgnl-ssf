@@ -1,0 +1,76 @@
+displayName: Omnissa CAEP Events
+icon: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzk4IiBoZWlnaHQ9IjM5OCIgdmlld0JveD0iMCAwIDM5OCAzOTgiIGNsYXNzPSJfY2lyY2xlLWNhbGxvdXQtc3ZnXzFiaWFiXzEwMyI+CiAgICA8ZGVmcz4KICAgICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPgogICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfMTg5NjAiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDE4OTYwIiB3aWR0aD0iMzk4IiBoZWlnaHQ9IjM5OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjkuMjUzIDMyLjM5NCkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNjYiPjwvcmVjdD4KICAgICAgPC9jbGlwUGF0aD4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIwLjczIiB5MT0iMC4wMzUiIHgyPSIwLjMyOCIgeTI9IjAuOTgiIGdyYWRpZW50VW5pdHM9Im9iamVjdEJvdW5kaW5nQm94Ij4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyZjMyNzIiPjwvc3RvcD4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAuMjYxIiBzdG9wLWNvbG9yPSIjNGExMmYwIj48L3N0b3A+CiAgICAgICAgPHN0b3Agb2Zmc2V0PSIwLjYwNiIgc3RvcC1jb2xvcj0iIzRhMTJmMCI+PC9zdG9wPgogICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2QwMGFmZiI+PC9zdG9wPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9Im8tc2hhcGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yOS4yNTMgLTMyLjM5NCkiIGNsaXAtcGF0aD0idXJsKCNjbGlwLXBhdGgpIj4KICAgICAgPHBhdGggaWQ9IkV4Y2x1c2lvbl8xMCIgZGF0YS1uYW1lPSJFeGNsdXNpb24gMTAiIGQ9Ik0xNzkuNDg4LDM4MC4yNDdoLS4wMTFBMTc4Ljg0OSwxNzguODQ5LDAsMCwxLDg5LjgsMzU2LjEzYTE4MS4xNzYsMTgxLjE3NiwwLDAsMS0yOS40NjYtMjEuMkExNzguMzE0LDE3OC4zMTQsMCwwLDEsMjMuODc2LDExMS44NzVjMi4xMzktMy43MDUsNC40MzUtNy4zNzQsNi44MjMtMTAuOUExNzkuMjIsMTc5LjIyLDAsMCwwLDM0MC4zMzYsMjc5LjcyMmMtMS44NjcsMy44NDMtMy45LDcuNjctNi4wMzgsMTEuMzc1YTE3OC44MiwxNzguODIsMCwwLDEtMTU0LjgxMSw4OS4xNVpNMzQwLjM0MiwyNzkuNzE0aDBhMTc3LjM4OSwxNzcuMzg5LDAsMCwwLDE2LjY2Ni05Ny45QTE3OS41NjcsMTc5LjU2NywwLDAsMCw5NS44MTMsNDIuOTdhMTc3LjA4NSwxNzcuMDg1LDAsMCwwLTY1LjExNCw1OGMxLjg3NC0zLjg1NiwzLjkxMy03LjY5NSw2LjA1OS0xMS40MTFBMTc5LjIyMywxNzkuMjIzLDAsMSwxLDM0Ny4xOCwyNjguNzgzQzM0NS4wMzcsMjcyLjUsMzQyLjczNiwyNzYuMTc0LDM0MC4zNDIsMjc5LjcxNFoiIHRyYW5zZm9ybT0ibWF0cml4KDAuOTY2LCAwLjI1OSwgLTAuMjU5LCAwLjk2NiwgOTguNDE1LCAwKSIgZmlsbD0iIzRhMTJmMCI+PC9wYXRoPgogICAgPC9nPgogIDwvc3ZnPg==
+description: Omnissa CAEP Events
+deliveryMethod: "eventPush"
+type: "EventStreams-1.0.0"
+entities:
+  5173817da35043a7b6ac68bf1d109199:
+    displayName: Device Compliance Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/device-compliance-change
+    description: Device Compliance Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].event_timestamp
+        type: Int64
+        attributeAlias: 35e2e651-dca1-49b2-8773-352c3ff5b4ef
+      - name: subject
+        externalId: $.sub_id.user.email
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 3b5174b1-277b-4605-b12d-0ddbb243481e
+        list: false
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: 594103e7-d8ca-4a47-9c32-1d57c9d33d4e
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: 60e45b87-5554-4f84-b9f0-100c6875828a
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: 703c3271-8715-4286-bdd5-1f897a9d2108
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 75e8368c-685a-4678-a618-cd78d691c33b
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: 7629a90a-59d2-4351-b187-71cca8eb15f2
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].initiating_entity
+        type: String
+        attributeAlias: 825a47cd-5817-4def-bfbc-abafe68ec805
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].reason_admin.en
+        type: String
+        attributeAlias: 8c962824-9606-4d5d-b5be-562826e93593
+      - name: currentStatus
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].current_status
+        type: String
+        attributeAlias: c723c2aa-66f0-4d20-beb1-353d61e46acd
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: d038e6e6-5d64-4db9-be31-acb198004715
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: e0298d19-fbbe-4cc0-a3b3-65100caf1eed
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].reason_user.en
+        type: String
+        attributeAlias: e1fa40a6-8c52-4b40-a586-b0c74c741e9b
+      - name: previousStatus
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].previous_status
+        type: String
+        attributeAlias: efdead38-d88d-4eae-aa95-aeb7597f7955
+    entityAlias: 5173817d-a350-43a7-b6ac-68bf1d109199
