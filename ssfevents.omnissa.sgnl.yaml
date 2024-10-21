@@ -74,3 +74,50 @@ entities:
         type: String
         attributeAlias: efdead38-d88d-4eae-aa95-aeb7597f7955
     entityAlias: 5173817d-a350-43a7-b6ac-68bf1d109199
+  aabd1d80cdbe40918f92106777237358:
+    displayName: Verification Event
+    externalId: https://schemas.openid.net/secevent/ssf/event-type/verification
+    description: ""
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 0a84c3f4-6ec6-4d4d-a658-9e051716fcc8
+        list: false
+      - name: aud
+        externalId: $.aud
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 596c0762-20ae-4984-ba9c-d0af6b8749ba
+        list: false
+      - name: iat
+        externalId: $.iat
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: d294a9ed-40ea-4ec1-a2a3-29fd8b25e745
+        list: false
+      - name: subject
+        externalId: $.sub_id.id
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: d70fcb74-d60e-4153-bc4e-66d400ad0c2e
+        list: false
+      - name: iss
+        externalId: $.iss
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: d81f970c-216d-43b0-9bba-ec670940b732
+        list: false
+    entityAlias: aabd1d80-cdbe-4091-8f92-106777237358
