@@ -1,0 +1,501 @@
+displayName: Delinea CAEP Events
+icon: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMTYgMjY2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMTYgMjY2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzIzMTU1Njt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ4LDIxOS40SDQuNlY0NC44SDQ4VjIxOS40eiBNOTguNiw0LjZINDh2NDAuMmMwLDAsMjIuNi0wLjEsMzcuOSwwYzEyLjMsMC4xLDE5LjQsMCwyOC4xLDEuOQoJCWMzNy40LDcuMSw1MS42LDQ3LjEsNTEuNiw4NS40cy0xNC4yLDc4LjItNTEuNiw4NS40Yy04LjYsMS45LTE1LjgsMS45LTI4LjEsMS45Yy0xNS40LDAuMS0zNy45LDAtMzcuOSwwdjQwLjJoNTAuNQoJCWM4Mi43LDAsMTEyLjItNjcuOCwxMTIuMi0xMjcuNVMxODEuMiw0LjYsOTguNiw0LjZ6Ii8+CjwvZz4KPC9zdmc+Cg==
+type: "EventStreams-1.0.0"
+description: SSF CAEP Event Stream
+deliveryMethod: "eventPush"
+entities:
+  c2ca0644b5174a16a774ea10f3ee3d9e:
+    displayName: Session Revoked
+    externalId: https://schemas.openid.net/secevent/caep/event-type/session-revoked
+    description: Session Revoked Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: 12fe7d6a-93ce-4536-a539-a8676415c78e
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 20712dfa-ecea-46e6-937a-fcb31acbe4fb
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: 228341a0-b44f-454a-8034-6ce247395da9
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].reason_admin.en
+        type: String
+        attributeAlias: 2da91ead-f3fb-4539-85ea-eab2215a9e17
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: 2e606eb7-a626-488b-ae5b-90f103b81081
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].event_timestamp
+        type: Int64
+        attributeAlias: 32b92572-9e69-48e0-bead-c13512e2ff87
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: 86a81f5b-eeb9-42f0-8594-d3ddb0368e8b
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: a09e3f02-9731-4736-a191-78f088a1da42
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].initiating_entity
+        type: String
+        attributeAlias: b4d82216-8263-4a4f-a207-3a9bce613993
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+        attributeAlias: bc17cecd-5f1b-4508-a437-8f4f5eeef6fc
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-revoked"].reason_user.en
+        type: String
+        attributeAlias: c470feab-a5e7-4d00-938f-42e2316c8832
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: fc1022ef-5d18-4d81-97a2-b5d8dd6915ed
+    entityAlias: c2ca0644-b517-4a16-a774-ea10f3ee3d9e
+  86d85e6e6a7640f2808ba303b7579b61:
+    displayName: Token Claims Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/token-claims-change
+    description: Token Claims Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: 00b22b4b-11ef-4e92-98a1-0b17d223313f
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: 0173b068-4ba5-4e6a-a5a8-6f063283b3bb
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: 11054505-3e5f-4063-a3f5-60d33778c9bc
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: 35429cbf-c7f2-42d0-8d47-1d7e9b2e1997
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+        attributeAlias: 375022f2-1685-4047-9825-151ab5f9bdb8
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].initiating_entity
+        type: String
+        attributeAlias: 424fbdb0-8317-42e4-9122-cf5672aa3ace
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: 4b302e42-0f19-416a-b5ca-2dc52d31bef7
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 57514d48-a2e8-4db0-9c1c-68e83d447108
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].event_timestamp
+        type: Int64
+        attributeAlias: 5a37c373-bd10-4fc6-bb0e-4ad029475f53
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: 990d4629-c170-4d98-86ab-86a06834014e
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].reason_admin.en
+        type: String
+        attributeAlias: b7b5c7ac-3e47-42e0-9c36-6a62f0e6c6f8
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/token-claims-change"].reason_user.en
+        type: String
+        attributeAlias: d2691c4b-78fe-4d10-ae03-8c77af19e6d3
+    entityAlias: 86d85e6e-6a76-40f2-808b-a303b7579b61
+  947b789fbba54993869143daea9daeb6:
+    displayName: Credential Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/credential-change
+    description: Credential Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: changeType
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].change_type
+        type: String
+        attributeAlias: 104ff514-685c-45eb-857b-e8c5a48fd424
+      - name: credentialType
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].credential_type
+        type: String
+        attributeAlias: 15c89506-2e56-47c9-a623-d53b1e7e75be
+      - name: friendlyName
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].friendly_name
+        type: String
+        attributeAlias: 21dac73a-bca7-47bb-8825-bf054f831f8c
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: 458196d6-0706-4ab9-8b4e-26530bacd3e4
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 57dc0cb1-d3c0-4ecb-9e70-b4214cc8b730
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+        attributeAlias: 6553529c-b94b-467a-a435-4d89880954f2
+      - name: fido2_aaguid
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].fido2_aaguid
+        type: String
+        attributeAlias: 679c3a0f-02bc-4e87-b437-0bb373c95493
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].event_timestamp
+        type: Int64
+        attributeAlias: 71d43ba4-f4c5-4225-bf63-08dcb4a11972
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].initiating_entity
+        type: String
+        attributeAlias: 73bb24eb-3fa0-4424-8c0e-76da1e6a3b48
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: 7e6f01ba-dc96-4b7f-86b8-4935a0175096
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: 7f6a4eff-c0f1-419f-a2cb-a30204d33c0d
+      - name: x509Serial
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].x509_serial
+        type: String
+        attributeAlias: 806be7eb-6195-4aec-bb59-cbc30cc77cc8
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: 87837b60-caed-4835-894f-4e8ad3bffd86
+      - name: x509Issuer
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].x509_issuer
+        type: String
+        attributeAlias: 954ee557-eb1a-4701-8b01-ffe501c249d4
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: 9a98d16f-930d-4b66-9eae-591c3b4aaa53
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].reason_user.en
+        type: String
+        attributeAlias: c371a1cd-c2e2-4fca-8587-4e0c6c3a8cf1
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: dc3301e3-e013-474b-b9cb-ef54594a4011
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/credential-change"].reason_admin.en
+        type: String
+        attributeAlias: fcd7efc7-6a85-4435-8a9c-5b8fe12c03ee
+    entityAlias: 947b789f-bba5-4993-8691-43daea9daeb6
+  247ca92f172f4dcdbd28d3b2026bd908:
+    displayName: Assurance Level Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/assurance-level-change
+    description: Assurance Level Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: 1ae97861-a8a8-4317-ae92-1aaea51c12e7
+      - name: namespace
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].namespace
+        type: String
+        attributeAlias: 360aae11-2a2b-426e-8214-e6c37858d754
+      - name: changeDirection
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].change_direction
+        type: String
+        attributeAlias: 46299c3f-41f9-4849-9dae-4ecae0ce8fd4
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: 4719af2b-e18b-4ea1-acd9-c5c87c80a0e4
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+        attributeAlias: 499dedbd-018f-408f-9f04-73bc40465453
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: 5c6f711a-a121-417a-8d36-83b2d1100dc4
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: 5e175155-8da1-44b1-87dd-f8098f7006fa
+      - name: currentLevel
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].current_level
+        type: String
+        attributeAlias: 6d9574ea-2501-4d2c-bbe7-05e7fa482b8a
+      - name: previousLevel
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].previous_level
+        type: String
+        attributeAlias: 6dffeb9e-0ae0-422a-b8a7-909fc4c84d7a
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: 6f6e237a-1898-4952-a3d4-fee9d2e4dcb5
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].initiating_entity
+        type: String
+        attributeAlias: 72c6b986-5474-40eb-a1ce-f27b44113d9c
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 7dc53d31-8ed1-4569-8dcb-8578e9ed41ad
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].event_timestamp
+        type: Int64
+        attributeAlias: 81f37c55-46e0-4c7d-84b9-58c6c9af312d
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: bc078830-a586-42ba-b9f9-9d18d1c946df
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].reason_admin.en
+        type: String
+        attributeAlias: c6c31294-4912-4e13-b842-e46b5eaa7706
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/assurance-level-change"].reason_user.en
+        type: String
+        attributeAlias: e9d35d21-7126-4119-b02c-bd43d0279f4a
+    entityAlias: 247ca92f-172f-4dcd-bd28-d3b2026bd908
+  49b79c18ff7042a582eeb206088d5622:
+    displayName: Device Compliance Change
+    externalId: https://schemas.openid.net/secevent/caep/event-type/device-compliance-change
+    description: Device Compliance Change Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: 02c5a83f-0b9c-4a92-af40-d93611ab4e5a
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: 25f5f2db-503a-4a47-a57c-08492842d121
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: 2be2a914-6f10-4c8e-81c9-eb0bbd0a53ac
+      - name: currentStatus
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].current_status
+        type: String
+        attributeAlias: 4755a878-a859-402e-a5a4-7c638da4a069
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].reason_admin.en
+        type: String
+        attributeAlias: 5fdc31f2-95f3-4f16-b6bf-42655fd3af6a
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].initiating_entity
+        type: String
+        attributeAlias: 6e382a96-4af6-43fb-971e-b58a6a48f948
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: 85553d5b-8476-413b-9431-050d8c9f3193
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].reason_user.en
+        type: String
+        attributeAlias: 9041f8a6-2fb2-4130-8d69-bc3522131df7
+      - name: previousStatus
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].previous_status
+        type: String
+        attributeAlias: 910aaeaf-81bd-4cc7-8915-9700061d895e
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/device-compliance-change"].event_timestamp
+        type: Int64
+        attributeAlias: a216be35-28eb-4223-a91c-3893e3cb6b37
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: adb4c077-0d74-4242-afa5-45fd33ab5e1f
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: c3d32891-315a-4f41-b7ff-2b360840170b
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+        attributeAlias: ca5ce72d-87cc-4de6-b101-817941761968
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: e116c907-4f44-48ee-a773-55430cb7d1f2
+    entityAlias: 49b79c18-ff70-42a5-82ee-b206088d5622
+  f573d057dae94ac3841bb1a6ad73e66d:
+    displayName: Session Established
+    externalId: https://schemas.openid.net/secevent/caep/event-type/session-established
+    description: Session Established Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].reason_admin.en
+        type: String
+        attributeAlias: 164815ba-cbfc-44a5-ac17-1e26ee21ee9c
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].reason_user.en
+        type: String
+        attributeAlias: 2c8c66db-2be7-4ac4-96ef-8fea9c837e38
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: 3d9fded5-5485-4e45-9169-8d9ed8e43f84
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: 47e5f977-b4f6-4597-b306-77793f773541
+      - name: ipAddresses
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].ips
+        type: String
+        attributeAlias: 4e4ab15e-b820-48ba-af40-dba677c26880
+        list: true
+      - name: externalSessionIdentifier
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].ext_id
+        type: String
+        attributeAlias: 5fa4ff70-46d9-4f9e-a853-3074d06b2d1f
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+        attributeAlias: 879c2427-c2ff-497a-a167-ffe2b4a460f6
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 89c2ef25-0cf5-489d-bf09-ddf060898467
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: 8a852f77-e105-4cfa-8cd8-a45ea228cc6f
+      - name: fingerprintUserAgent
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].fp_ua
+        type: String
+        attributeAlias: 8cfa1708-58e5-496c-a318-f9d23779f1d8
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: af73ab77-24b2-41cc-85cb-247a69228657
+      - name: authenticationContextClassReference
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].acr
+        type: String
+        attributeAlias: b3f75c46-d591-4138-b37b-7a58b658c077
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: bc9320a7-b794-48ad-b664-0094660671c2
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].initiating_entity
+        type: String
+        attributeAlias: d8f91811-20b0-41a1-9b98-00fcfeda1660
+      - name: authenticationMethodsReference
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].amr
+        type: String
+        attributeAlias: e6eee9e8-57aa-4cb7-b576-4ab77fc028d8
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: f4c0ad3f-1c22-43bc-bc95-b2facbae7564
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-established"].event_timestamp
+        type: Int64
+        attributeAlias: f9fba493-bff2-41e6-82e9-b4438d44ff10
+    entityAlias: f573d057-dae9-4ac3-841b-b1a6ad73e66d
+  f238f583a30c46baba421f4a6e2e3665:
+    displayName: Session Presented
+    externalId: https://schemas.openid.net/secevent/caep/event-type/session-presented
+    description: Session Presented Event
+    pageSize: 1000
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: $.jti
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 03d0416b-7a64-4eed-926f-ec8a5ca3c8c0
+      - name: reasonUserEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].reason_user.en
+        type: String
+        attributeAlias: 06144a04-3390-46a8-a811-b51da6f79c3a
+      - name: reasonAdminEn
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].reason_admin.en
+        type: String
+        attributeAlias: 1788370d-ed9b-4823-af25-9b5e37afa55b
+      - name: eventTimestamp
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].event_timestamp
+        type: Int64
+        attributeAlias: 1cc460eb-87e6-4c3c-abd5-f9b31d0680cb
+      - name: sgnlRawEventPayload
+        externalId: $.sgnl_raw
+        type: String
+        attributeAlias: 4ad2c6fa-1642-402d-9ebd-eff655046b06
+      - name: subject
+        externalId: $.sub_id.email
+        type: String
+        indexed: true
+        attributeAlias: 6c915972-5219-4ae2-aaee-7b45464ebc9f
+      - name: initiatingEntity
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].initiating_entity
+        type: String
+        attributeAlias: 7ae38341-715a-4e77-bea0-0fd72c8883f0
+      - name: sgnlProcessedAt
+        externalId: $.sgnl_processed_at
+        type: Int64
+        attributeAlias: 7fbb326d-4508-4202-a73f-8be471056833
+      - name: fingerprintUserAgent
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].fp_ua
+        type: String
+        attributeAlias: 8578676c-126c-4fd1-a50c-b6c176a562d2
+      - name: ipAddresses
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].ips
+        type: String
+        attributeAlias: a50c4604-9acc-4101-a5d4-9cd5001ea71b
+        list: true
+      - name: issuer
+        externalId: $.iss
+        type: String
+        attributeAlias: b083d2d3-ef0f-4d95-b07c-31e3b0390ae5
+      - name: audience
+        externalId: $.aud
+        type: String
+        attributeAlias: b1eaabad-0a22-4b03-8970-03ee906e94b9
+      - name: issuedAt
+        externalId: $.iat
+        type: Int64
+        attributeAlias: b385ada7-d70a-4be6-b5c3-2a18b904fe74
+      - name: externalSessionIdentifier
+        externalId: $.events..["https://schemas.openid.net/secevent/caep/event-type/session-presented"].ext_id
+        type: String
+        attributeAlias: c18e2517-0ae7-442a-b8f9-bb99ebaba8d1
+      - name: sgnlRawJWT
+        externalId: $.sgnl_jwt
+        type: String
+        attributeAlias: fbd1a2a1-7a91-468f-895a-6453cd8dc63f
+    entityAlias: f238f583-a30c-46ba-ba42-1f4a6e2e3665
