@@ -1,13 +1,13 @@
-displayName: JAMF Shared Signals
-icon: PHN2ZyBjbGFzcz0iamFtZi1sb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjIgNTYiIHJvbGU9InByZXNlbnRhdGlvbiIgYXJpYS1oaWRkZW49InRydWUiPiA8dGl0bGU+SmFtZjwvdGl0bGU+IDxwYXRoIGZpbGw9IiM3NzhlYjEiIGQ9Ik0zMy42LDcgQzI4LjEsNyAyNC44LDkuMyAyMy4zLDE0LjMgTDE5LjUsMjYuMiBDMTguMSwzMC4xIDE1LjgsMzEuNyAxMS43LDMxLjcgTDIuMiwzMS43IEMxLDMxLjcgMCwzMi43IDAsMzMuOSBMMCw0MCBDMCw0MS4xIDAuOSw0MiAyLjEsNDIgTDQwLjcsNDIgQzQxLjksNDIgNDIuOSw0MSA0Mi45LDM5LjggTDQyLjksOS4xIEM0Mi45LDcuOSA0Miw3IDQwLjgsNyBMMzMuNiw3IEwzMy42LDcgWiBNMi4zLDAgQzEuMSwwIDAsMS4xIDAsMi4zIEwwLDE4LjUgQzAsMTkuOCAxLDIwLjggMi4zLDIwLjggTDEwLjUsMjAuOCBDMTQuMiwyMC44IDE5LjQsMjAgMjAuOCwxMy40IEMyMC44LDEzLjQgMjIuMiw2LjcgMjMsMi44IEMyMy4zLDEuMyAyMi4yLC03LjEwNTQyNzM2ZS0xNSAyMC43LC03LjEwNTQyNzM2ZS0xNSBMMi4zLC03LjEwNTQyNzM2ZS0xNSBMMi4zLDAgWiI+PC9wYXRoPiA8cGF0aCBjbGFzcz0ibG9nby13b3JkbWFyayIgZD0iTTE1Mi45LDEzLjMgQzE1Mi45LDcuOCAxNTYuNiw1LjIgMTYxLjgsNSBMMTYxLjgsOS41IEwxNjAuOSw5LjUgQzE1OC42LDkuNSAxNTcuNCwxMS40IDE1Ny40LDEzLjcgTDE1Ny40LDE3LjMgTDE2MS42LDE3LjMgTDE2MS42LDIxLjMgTDE1Ny40LDIxLjMgTDE1Ny40LDQzLjUgTDE1Mi45LDQzLjUgTDE1Mi45LDIxLjIgTDE0OSwyMS4yIEwxNDksMTcuMiBMMTUyLjksMTcuMiBMMTUyLjksMTMuMyBMMTUyLjksMTMuMyBaIE0xMzcuMywyNy43IEMxMzcuMywyMy4yIDEzNC43LDIxLjIgMTMxLjYsMjEuMiBDMTI3LjksMjEuMiAxMjUuMSwyMy42IDEyNS4xLDI3LjkgTDEyNS4xLDQzLjcgTDEyMC42LDQzLjcgTDEyMC42LDI3LjcgQzEyMC42LDIzLjIgMTE4LDIxLjIgMTE0LjksMjEuMiBDMTExLjIsMjEuMiAxMDguNCwyMy42IDEwOC40LDI3LjkgTDEwOC40LDQzLjcgTDEwNCw0My43IEwxMDQsMTcuNiBMMTA4LjUsMTcuNiBMMTA4LjUsMjAuNyBMMTA4LjYsMjAuNyBDMTA5LjgsMTggMTEzLDE3IDExNS43LDE3IEMxMTguMywxNyAxMjEuMiwxNy43IDEyMy4zLDIxLjUgQzEyNC45LDE4LjIgMTI4LjMsMTcgMTMxLjcsMTcgQzEzNy4zLDE3IDE0MS42LDIwLjQgMTQxLjYsMjcuMiBMMTQxLjYsNDMuNyBMMTM3LjEsNDMuNyBMMTM3LjEsMjcuNyBMMTM3LjMsMjcuNyBaIE04My4xLDI5LjkgQzc3LjYsMjkuOSA3NS44LDMyLjYgNzUuOCwzNS4xIEM3NS44LDM3LjYgNzcuNiw0MC4zIDgzLjEsNDAuMyBDODguNiw0MC4zIDkwLjQsMzcuNiA5MC40LDM1LjEgQzkwLjQsMzIuNiA4OC41LDI5LjkgODMuMSwyOS45IEw4My4xLDI5LjkgTDgzLjEsMjkuOSBaIE05MC4yLDI2LjIgQzkwLjIsMjEuOSA4NS45LDIwLjkgODIuNSwyMC45IEM4MC4xLDIwLjkgNzcuOCwyMS41IDc1LjQsMjIuNyBMNzMuNCwxOSBDNzcuMywxNy4zIDgwLjQsMTcgODIuNywxNyBDODguOSwxNyA5NC43LDE5LjcgOTQuNywyNS45IEw5NC43LDQzLjcgTDkwLjUsNDMuNyBMOTAuNSw0MC45IEM4OC4yLDQzLjMgODUuNyw0NC4zIDgyLjMsNDQuMyBDNzYsNDQuMyA3MSw0MC44IDcxLDM0LjkgQzcxLDMwLjEgNzUsMjUuOSA4Mi4yLDI1LjkgQzg0LjksMjUuOSA4Ny44LDI2LjcgOTAuMiwyOC45IEw5MC4yLDI2LjIgTDkwLjIsMjYuMiBaIE02Mi41LDYgQzY0LjIsNiA2NS42LDcuNCA2NS42LDkuMSBDNjUuNiwxMC45IDY0LjIsMTIuMyA2Mi41LDEyLjMgQzYwLjgsMTIuMyA1OS40LDEwLjkgNTkuNCw5LjIgQzU5LjQsNy40IDYwLjgsNiA2Mi41LDYgTDYyLjUsNiBMNjIuNSw2IFogTTYwLjQsMTcuNCBMNjQuOSwxNy40IEw2NSw0Ni45IEM2NSw1My43IDYwLjYsNTYgNTUuNyw1NiBMNTQsNTYgTDU0LDUxLjggTDU1LjcsNTEuOCBDNjAuMSw1MS44IDYwLjUsNDkuNCA2MC41LDQ3LjEgTDYwLjQsMTcuNCBMNjAuNCwxNy40IFoiPjwvcGF0aD4gPC9zdmc+
-type: "EventStreams-1.0.0"
+displayName: JAMF CAEP Events
+icon: PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMUExQzFGIi8+CjxwYXRoIGQ9Ik00My4zMjg3IDE4LjUyNjhDMzguMjAwNSAxOC41MjY4IDM1LjEyMzUgMjAuNjcxMyAzMy43MjQ5IDI1LjMzMzNMMzAuMTgxOCAzNi40Mjg5QzI4Ljg3NjUgNDAuMDY1MyAyNi43MzE5IDQxLjU1NzEgMjIuOTA5MSA0MS41NTcxSDE0LjA1MTNDMTIuOTMyNCA0MS41NTcxIDEyIDQyLjQ4OTUgMTIgNDMuNjA4NFY0OS4yOTZDMTIgNTAuMzIxNyAxMi44MzkyIDUxLjE2MDggMTMuOTU4IDUxLjE2MDhINDkuOTQ4N0M1MS4wNjc2IDUxLjE2MDggNTIgNTAuMjI4NCA1MiA0OS4xMDk2VjIwLjQ4NDhDNTIgMTkuMzY2IDUxLjE2MDggMTguNTI2OCA1MC4wNDIgMTguNTI2OEg0My4zMjg3Wk0xNC4xNDQ1IDEyQzEzLjAyNTYgMTIgMTIgMTMuMDI1NiAxMiAxNC4xNDQ1VjI5LjI0OTRDMTIgMzAuNDYxNSAxMi45MzI0IDMxLjM5MzkgMTQuMTQ0NSAzMS4zOTM5SDIxLjc5MDJDMjUuMjQwMSAzMS4zOTM5IDMwLjA4ODYgMzAuNjQ4IDMxLjM5MzkgMjQuNDk0MkMzMS4zOTM5IDI0LjQ5NDIgMzIuNjk5MyAxOC4yNDcxIDMzLjQ0NTIgMTQuNjEwN0MzMy43MjQ5IDEzLjIxMjEgMzIuNjk5MyAxMiAzMS4zMDA3IDEyTDE0LjE0NDUgMTJaIiBmaWxsPSIjNzc4RUIxIi8+Cjwvc3ZnPgo=
 description: SSF CAEP Event Stream
+type: "EventStreams-1.0.0"
 deliveryMethod: "eventPush"
 entities:
-  29253593c40347ed9643ec4f89dc9a59:
-    displayName: Device Risk Change
-    externalId: https://schemas.okta.com/secevent/okta/event-type/device-risk-change
-    description: https://schemas.okta.com/secevent/okta/event-type/device-risk-change
+  308720e82965480cb5f86ce66e2200fa:
+    displayName: Verification Event
+    externalId: https://schemas.openid.net/secevent/sse/event-type/verification
+    description: ""
     pagesOrderedById: false
     attributes:
       - name: exp
@@ -16,55 +16,15 @@ entities:
         type: DateTime
         indexed: false
         uniqueId: false
-        attributeAlias: 16f20a6f-47e5-471e-9ddd-87a021602987
+        attributeAlias: 0da4abe7-d4eb-44c7-a610-8c6a11c405aa
         list: false
       - name: subject
-        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].subject.user.email
+        externalId: $.events..state
         description: ""
         type: String
         indexed: true
         uniqueId: false
-        attributeAlias: 3bd13757-3e0e-40bb-b374-d7b719ebc396
-        list: false
-      - name: previous_level
-        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].previous_level
-        description: ""
-        type: String
-        indexed: false
-        uniqueId: false
-        attributeAlias: 5481bb07-597a-4b8b-80ba-bed7d417b0e1
-        list: false
-      - name: previous_management_status
-        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].previous_management_status
-        description: ""
-        type: String
-        indexed: false
-        uniqueId: false
-        attributeAlias: 633fb86f-2b86-4ef2-87cf-2a009a069d76
-        list: false
-      - name: id
-        externalId: $.jti
-        description: ""
-        type: String
-        indexed: true
-        uniqueId: true
-        attributeAlias: 7d071538-6942-457a-967d-42fa3b2b051f
-        list: false
-      - name: iat
-        externalId: $.iat
-        description: ""
-        type: DateTime
-        indexed: false
-        uniqueId: false
-        attributeAlias: a74d9af9-9c90-4b86-9efc-26175ff88c65
-        list: false
-      - name: current_management_status
-        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].current_management_status
-        description: ""
-        type: String
-        indexed: false
-        uniqueId: false
-        attributeAlias: c6c32fbf-500f-4c38-a725-669c6fc54332
+        attributeAlias: 3dcaa702-1f5f-475f-93a4-e12370b483f0
         list: false
       - name: iss
         externalId: $.iss
@@ -72,7 +32,141 @@ entities:
         type: String
         indexed: false
         uniqueId: false
-        attributeAlias: d2a215e9-c9ac-42bd-84df-fbe4e3443ae6
+        attributeAlias: 43de2a09-b6e3-48a7-9c12-342d85410804
+        list: false
+      - name: id
+        externalId: $.jti
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 5ec53071-059d-4aae-a165-06fe7c539cfe
+        list: false
+      - name: iat
+        externalId: $.iat
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: ac10efc4-7689-42f5-aa33-94bcf14e4c2a
+        list: false
+      - name: rawJwt
+        externalId: $.sgnl_jwt
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: d1294508-ba33-453a-b5fb-3e4d61f3a39c
+        list: false
+    entityAlias: 308720e8-2965-480c-b5f8-6ce66e2200fa
+  81770e85034d4abc9a15933deec91fe1:
+    displayName: Device Compliance
+    externalId: https://schemas.openid.net/secevent/caep/event-type/device-compliance-change
+    description: ""
+    pagesOrderedById: false
+    attributes:
+      - name: rawJwt
+        externalId: $.sgnl_jwt
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 264ca16b-2811-4402-9c1b-d96135dd57ab
+        list: false
+      - name: deviceSubject
+        externalId: $.sub_id.device.sub
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 2c23aab0-3da0-47c3-b259-ce8fc0b545ea
+        list: false
+      - name: id
+        externalId: $.jti
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 3559e2b7-93d5-4e0a-b6bb-9d1db4a54bd2
+        list: false
+      - name: exp
+        externalId: $.exp
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: 5c4ba525-3d88-4f6a-8633-2869f0728f8c
+        list: false
+      - name: previous_status
+        externalId: $.events..previous_status
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 5c60d515-41dd-4cc1-ae0c-828ad5268387
+        list: false
+      - name: current_status
+        externalId: $.events..current_status
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 63709690-1314-4929-8ae5-e0b221d561b4
+        list: false
+      - name: issuer
+        externalId: $.iss
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 63b691c3-7713-4207-a635-e499134e138a
+        list: false
+      - name: iat
+        externalId: $.iat
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: 764202ab-6217-48bc-a95d-ac4acbbf0ca2
+        list: false
+      - name: subject
+        externalId: $.sub_id.user.email
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 88cc9536-fd96-4c59-8afa-9f781b882442
+        list: false
+      - name: initiating_entity
+        externalId: $.events.initiating_entity
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: b7a07b7f-77ec-4332-b5b8-8775f8ceb06c
+        list: false
+    entityAlias: 81770e85-034d-4abc-9a15-933deec91fe1
+  4377724203104dcbbdfb6fc4c046513e:
+    displayName: Device Risk Change
+    externalId: https://schemas.okta.com/secevent/okta/event-type/device-risk-change
+    description: https://schemas.okta.com/secevent/okta/event-type/device-risk-change
+    pagesOrderedById: false
+    attributes:
+      - name: iat
+        externalId: $.iat
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: 09b6cc4f-a433-4011-8c5a-1524adc88e97
+        list: false
+      - name: previous_level
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].previous_level
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 0f798492-446c-4597-adbb-0b08ff0d64e2
         list: false
       - name: sgnlJwt
         externalId: $.sgnl_jwt
@@ -80,15 +174,15 @@ entities:
         type: String
         indexed: false
         uniqueId: false
-        attributeAlias: d8c3520e-cc1c-4f54-ae8b-cbf7353bda19
+        attributeAlias: 276c44f5-72ad-4561-acd2-2280a74c1ff3
         list: false
-      - name: current_level
-        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].current_level
+      - name: iss
+        externalId: $.iss
         description: ""
         type: String
         indexed: false
         uniqueId: false
-        attributeAlias: db52bc28-fdc1-4e5a-85e0-2f11baff14e3
+        attributeAlias: 353aafdb-456b-4a74-a49e-315588e5a6f9
         list: false
       - name: sgnlRawEventPayload
         externalId: $.sgnl_raw
@@ -96,6 +190,54 @@ entities:
         type: String
         indexed: false
         uniqueId: false
-        attributeAlias: dc80ab58-5ff1-4453-b36d-3c9aa80dd9b4
+        attributeAlias: 457799f4-b893-4d1f-8722-4521037e8b4f
         list: false
-    entityAlias: 29253593-c403-47ed-9643-ec4f89dc9a59
+      - name: current_management_status
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].current_management_status
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 51e392b8-261d-4424-bce6-c4091e27f5fc
+        list: false
+      - name: previous_management_status
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].previous_management_status
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 62eb7d10-b105-4779-800c-fa6e98c04e2f
+        list: false
+      - name: exp
+        externalId: $.exp
+        description: ""
+        type: DateTime
+        indexed: false
+        uniqueId: false
+        attributeAlias: 6658c842-d9cd-454a-bc6c-64751dd1bc90
+        list: false
+      - name: subject
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].subject.user.email
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 85cb74ae-0e4d-4b64-bd67-1ba3e1492a25
+        list: false
+      - name: id
+        externalId: $.jti
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: a8415ebc-638b-4605-b91c-3620cca057a6
+        list: false
+      - name: current_level
+        externalId: $.events..["https://schemas.okta.com/secevent/okta/event-type/device-risk-change"].current_level
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: d89adeff-5b70-428e-8039-8d0360a5e7c8
+        list: false
+    entityAlias: 43777242-0310-4dcb-bdfb-6fc4c046513e
