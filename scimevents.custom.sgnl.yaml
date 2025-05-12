@@ -1,0 +1,73 @@
+displayName: Custom SCIM Events
+icon: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjUuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMDAgMjAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6dXJsKCNTVkdJRF8xXyk7fQo8L3N0eWxlPgo8Zz4KCQoJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOTkuNDE1NSIgeTE9IjExOCIgeDI9Ijk5LjQxNTUiIHkyPSItNDIiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAxMzgpIj4KCQk8c3RvcCAgb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojRkYwMEVFIi8+CgkJPHN0b3AgIG9mZnNldD0iOS4wMDAwMDBlLTAyIiBzdHlsZT0ic3RvcC1jb2xvcjojRjQwNEVGIi8+CgkJPHN0b3AgIG9mZnNldD0iMC4yNCIgc3R5bGU9InN0b3AtY29sb3I6I0Q3MERGMSIvPgoJCTxzdG9wICBvZmZzZXQ9IjAuNDQiIHN0eWxlPSJzdG9wLWNvbG9yOiNBNzFERjQiLz4KCQk8c3RvcCAgb2Zmc2V0PSIwLjY4IiBzdHlsZT0ic3RvcC1jb2xvcjojNjUzM0Y4Ii8+CgkJPHN0b3AgIG9mZnNldD0iMC45NSIgc3R5bGU9InN0b3AtY29sb3I6IzExNEZGRSIvPgoJCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDU1RkYiLz4KCTwvbGluZWFyR3JhZGllbnQ+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDEuOSw5Mi45Yy0wLjksMC0xLjgsMC4yLTIuNywwLjVjLTAuOCwwLjMtMS42LDAuOS0yLjMsMS41Yy0wLjYsMC42LTEuMiwxLjQtMS41LDIuMwoJCUMzNS4yLDk4LDM1LDk4LjksMzUsOTkuOHYyMWMwLjEsMS44LDAuOSwzLjQsMi4xLDQuN2MxLjMsMS4yLDMsMS45LDQuOCwxLjljMS44LDAsMy41LTAuNyw0LjgtMS45YzEuMy0xLjIsMi4xLTIuOSwyLjEtNC43di0yMQoJCWMwLTAuOS0wLjItMS44LTAuNS0yLjdjLTAuMy0wLjgtMC45LTEuNi0xLjUtMi4yYy0wLjYtMC42LTEuNC0xLjItMi4yLTEuNUM0My43LDkzLjEsNDIuOCw5Mi45LDQxLjksOTIuOUw0MS45LDkyLjl6IE02NC45LDU1CgkJYy0xLjgsMC0zLjYsMC43LTQuOSwyYy0xLjMsMS4zLTIsMy0yLDQuOVYxNTJjMC4xLDEuOCwwLjgsMy41LDIuMSw0LjdjMS4zLDEuMiwzLDEuOSw0LjgsMS45YzEuOCwwLDMuNS0wLjcsNC44LTEuOQoJCWMxLjMtMS4yLDIuMS0yLjksMi4xLTQuN1Y2MS44YzAtMS44LTAuNy0zLjYtMi00LjljLTAuNi0wLjYtMS40LTEuMS0yLjMtMS41QzY2LjcsNTUuMSw2NS44LDU0LjksNjQuOSw1NUw2NC45LDU1eiBNNjQuOSwxNjYKCQljLTEuNCwwLTIuNywwLjQtMy45LDEuMmMtMS4xLDAuOC0yLDEuOC0yLjYsMy4xYy0wLjUsMS4zLTAuNywyLjctMC40LDRjMC4zLDEuMywwLjksMi42LDEuOSwzLjVjMC44LDAuOCwxLjgsMS40LDIuOSwxLjcKCQljMS4xLDAuMywyLjIsMC40LDMuNCwwLjJjMS4xLTAuMiwyLjItMC43LDMtMS40YzAuOS0wLjcsMS42LTEuNiwyLTIuN2MwLjQtMS4xLDAuNi0yLjIsMC41LTMuM2MtMC4xLTEuMS0wLjUtMi4yLTEuMS0zLjIKCQljLTAuNi0wLjktMS41LTEuNy0yLjUtMi4zQzY3LjIsMTY2LjMsNjYuMSwxNjYsNjQuOSwxNjZ6IE04Ny45LDQwLjdjLTAuOSwwLTEuOCwwLjItMi42LDAuNWMtMC44LDAuMy0xLjYsMC45LTIuMiwxLjUKCQlzLTEuMiwxLjQtMS41LDIuMmMtMC4zLDAuOC0wLjUsMS43LTAuNSwyLjZ2OTAuNWMwLDAuOSwwLjEsMS45LDAuNCwyLjdjMC4zLDAuOSwwLjgsMS43LDEuNSwyLjNjMC42LDAuNywxLjQsMS4yLDIuMywxLjYKCQljMC45LDAuNCwxLjgsMC42LDIuNywwLjZjMC45LDAsMS45LTAuMiwyLjctMC42YzAuOS0wLjQsMS42LTAuOSwyLjMtMS42YzAuNi0wLjcsMS4yLTEuNSwxLjUtMi4zYzAuMy0wLjksMC41LTEuOCwwLjQtMi43VjQ3LjYKCQljMC0wLjktMC4yLTEuOC0wLjUtMi42Yy0wLjMtMC44LTAuOS0xLjYtMS41LTIuMmMtMC42LTAuNi0xLjQtMS4yLTIuMi0xLjVDODkuNyw0MC45LDg4LjgsNDAuNyw4Ny45LDQwLjdMODcuOSw0MC43eiBNODcuOSwyMC4xCgkJYy0xLDAtMiwwLjItMywwLjdjLTAuOSwwLjQtMS43LDEuMS0yLjQsMS45Yy0wLjYsMC44LTEuMSwxLjctMS40LDIuN2MtMC4yLDEtMC4zLDItMC4xLDNjMC4zLDEuNywxLjMsMy4yLDIuNyw0LjIKCQljMS40LDEsMy4xLDEuNSw0LjgsMS4zYzEuNy0wLjIsMy4zLTEsNC40LTIuMmMxLjItMS4zLDEuOC0yLjksMS44LTQuNmMwLTAuOS0wLjItMS44LTAuNS0yLjdjLTAuMy0wLjgtMC45LTEuNi0xLjUtMi4zCgkJYy0wLjYtMC42LTEuNC0xLjItMi4yLTEuNUM4OS43LDIwLjIsODguOCwyMCw4Ny45LDIwLjFMODcuOSwyMC4xeiBNMTEwLjksNzUuNGMtMC45LDAtMS44LDAuMi0yLjcsMC41Yy0wLjgsMC4zLTEuNiwwLjktMi4yLDEuNQoJCWMtMC42LDAuNi0xLjIsMS40LTEuNSwyLjJjLTAuMywwLjgtMC41LDEuNy0wLjUsMi43djkwLjhjMCwxLjgsMC43LDMuNiwyLDQuOWMxLjMsMS4zLDMuMSwyLDQuOSwyYzEuOCwwLDMuNi0wLjcsNC45LTIKCQljMS4zLTEuMywyLTMuMSwyLTQuOVY4Mi4zYzAtMS44LTAuNy0zLjYtMi00LjlDMTE0LjUsNzYuMSwxMTIuOCw3NS40LDExMC45LDc1LjRMMTEwLjksNzUuNHogTTEzMy45LDU4Yy0wLjksMC0xLjgsMC4yLTIuNywwLjUKCQljLTAuOCwwLjMtMS42LDAuOS0yLjIsMS41cy0xLjIsMS40LTEuNSwyLjJjLTAuMywwLjgtMC41LDEuNy0wLjUsMi43djkwLjdjMCwxLjgsMC43LDMuNiwyLDQuOWMxLjMsMS4zLDMuMSwyLDQuOSwyCgkJYzEuOCwwLDMuNi0wLjcsNC45LTJjMS4zLTEuMywyLTMuMSwyLTQuOVY2NC45YzAtMC45LTAuMi0xLjgtMC41LTIuN2MtMC4zLTAuOC0wLjktMS42LTEuNS0yLjJjLTAuNi0wLjYtMS40LTEuMi0yLjItMS41CgkJQzEzNS43LDU4LjIsMTM0LjgsNTgsMTMzLjksNThMMTMzLjksNTh6IE0xNjMuOCw4OS40djIxYzAsMC45LTAuMSwxLjktMC40LDIuN2MtMC41LDEuMy0xLjQsMi41LTIuNSwzLjNjLTEuMiwwLjgtMi41LDEuMi0zLjksMS4yCgkJYy0xLjQsMC0yLjgtMC40LTMuOS0xLjJjLTEuMi0wLjgtMi0xLjktMi41LTMuM2MtMC4zLTAuOS0wLjUtMS44LTAuNC0yLjd2LTIxYzAtMC45LDAuMS0xLjksMC40LTIuN2MwLjMtMC45LDAuOC0xLjcsMS41LTIuNAoJCWMwLjctMC43LDEuNC0xLjIsMi4zLTEuNmMwLjktMC40LDEuOC0wLjYsMi43LTAuNmMwLjksMCwxLjksMC4yLDIuNywwLjZjMC45LDAuNCwxLjYsMC45LDIuMywxLjZjMC42LDAuNywxLjEsMS41LDEuNSwyLjQKCQlDMTYzLjcsODcuNiwxNjMuOSw4OC41LDE2My44LDg5LjRMMTYzLjgsODkuNHogTTE1Ni45LDEyNC4yYy0xLjIsMC0yLjQsMC4zLTMuNCwwLjljLTEsMC42LTEuOSwxLjQtMi41LDIuNWMtMC42LDEtMSwyLjItMSwzLjQKCQljMCwxLjIsMC4zLDIuNCwwLjgsMy40YzAuNiwxLjEsMS40LDIsMi40LDIuNmMxLDAuNiwyLjIsMSwzLjQsMS4xYzEuMiwwLjEsMi40LTAuMiwzLjUtMC43YzEuMS0wLjUsMi0xLjMsMi42LTIuMwoJCWMwLjktMS4zLDEuMy0yLjksMS4xLTQuNWMtMC4yLTEuNi0wLjktMy4xLTItNC4yQzE2MC41LDEyNC45LDE1OC43LDEyNC4yLDE1Ni45LDEyNC4yTDE1Ni45LDEyNC4yeiIvPgo8L2c+Cjwvc3ZnPg==
+description: Entity Push with SCIM Events
+hostname: sgnl.ai
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+pushType: "SCIM"
+deliveryMethod: "entityPush"
+adapterConfig: e30=
+entities:
+  Email:
+    parent: Users  
+    displayName: emails
+    externalId: emails
+    pushExternalId: "$.events.*.data.emails.*"
+    description: Entity representing user emails
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: type
+        externalId: type
+        pushExternalId: type
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 3771570d-dee5-42d5-86ac-1ea1fee270fb
+        list: false
+      - name: value
+        externalId: value
+        pushExternalId: value
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 56a0142d-170f-4f62-8573-0ad33439b65d
+        list: false
+    entityAlias: 4ffecf21-6cc3-4b03-8cb5-b395af82ebf8
+  User:
+    displayName: Users
+    externalId: Users
+    pushExternalId: Users
+    description: ""
+    pagesOrderedById: false
+    entityAlias: 62864663-0a74-4c6f-9dc8-81d2ae29bdcd
+    attributes:
+      - name: userName
+        externalId: userName
+        pushExternalId: $.events.*.data.userName
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: 1b51557d-41d8-4d46-b35b-5dbe928a8718
+        list: false
+      - name: id
+        externalId: id
+        pushExternalId: $.sub_id.id
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 34c283e3-2796-4094-8dcb-ae2f4a2f9a46
+        list: false
+      - name: enabled
+        externalId: enabled
+        pushExternalId: $.events.*.data.enabled
+        description: ""
+        type: Bool
+        indexed: false
+        uniqueId: false
+        attributeAlias: cf9e4484-daf5-4ab8-9dbf-2dd0e3defb17
+        list: false
